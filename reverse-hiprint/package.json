@@ -1,0 +1,24 @@
+{
+  "name": "reverse-hiprint",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Reverse engineering tools for hiprint bundle",
+  "scripts": {
+    "beautify": "node scripts/01-beautify.mjs",
+    "extract-webpack": "node scripts/02-extract-webpack-array.mjs",
+    "extract-browserify": "node scripts/03-extract-browserify.mjs",
+    "clean": "node scripts/04-clean-identifiers.mjs",
+    "scan-api": "node scripts/05-scan-api.mjs",
+    "clean-config": "node scripts/06-clean-config.mjs",
+    "scan-deps": "node scripts/07-scan-webpack-deps.mjs",
+    "all": "node scripts/reverse-all.mjs"
+  },
+  "devDependencies": {
+    "@babel/generator": "^7.24.0",
+    "@babel/parser": "^7.24.0",
+    "@babel/traverse": "^7.24.0",
+    "@babel/types": "^7.24.0",
+    "magic-string": "^0.30.8",
+    "prettier": "^3.2.5"
+  }
+}

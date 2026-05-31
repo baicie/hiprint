@@ -9,23 +9,31 @@ export interface LegacyPatchContext {
 
 export interface LegacyPatch {
   name: string;
+  /** If false, the patch re-applies on every loadLegacyRuntime call. Defaults to true. */
+  once?: boolean;
   apply(ctx: LegacyPatchContext): void;
 }
 
 const patches: LegacyPatch[] = [patchGlobalGuard, patchRuntimeProbe];
 
-const appliedPatches = new Set<string>();
+const PATCH_STATE_KEY = "__HIPRINT_RE_APPLIED_PATCHES__" as const;
 
 export function applyLegacyPatches(runtime: LegacyRuntime): void {
+  const win = runtime.rawWindow;
+  const applied = win[PATCH_STATE_KEY] ?? new Set<string>();
+  win[PATCH_STATE_KEY] = applied;
+
   const ctx: LegacyPatchContext = {
     runtime,
-    appliedPatches,
+    appliedPatches: applied,
   };
 
   for (const patch of patches) {
-    if (appliedPatches.has(patch.name)) continue;
+    const isOnce = patch.once !== false;
+
+    if (isOnce && applied.has(patch.name)) continue;
 
     patch.apply(ctx);
-    appliedPatches.add(patch.name);
+    applied.add(patch.name);
   }
 }

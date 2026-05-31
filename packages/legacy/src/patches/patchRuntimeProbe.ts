@@ -3,6 +3,7 @@ import type { LegacyPatch } from "./index";
 
 export const patchRuntimeProbe: LegacyPatch = {
   name: "runtime-probe",
+  once: false,
 
   apply() {
     window.__HIPRINT_RE_RUNTIME_SNAPSHOT__ = createRuntimeSnapshot();

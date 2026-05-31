@@ -1,9 +1,31 @@
+# Dependencies
 node_modules
-dist
 .pnpm-store
+
+# Build outputs
+dist
+build
 *.tsbuildinfo
-.DS_Store
+
+# Coverage
 coverage
+
+# Environment
 .env
+.env.*
 .env.local
-.reverse-audit
+
+# OS
+.DS_Store
+*.log
+
+# Generated audit artifacts (machine-readable, regenerated on demand)
+reports/reverse-audit/*.json
+reports/reverse-audit/*.tmp
+
+# Playground legacy vendor (copied from packages/legacy/vendor at dev-time)
+apps/playground-legacy/public/legacy/
+
+# Test reports
+playwright-report
+test-results

@@ -13,6 +13,8 @@ const LEGACY_SCRIPTS = [
   "hiprint.config.js",
 ];
 
+const scriptPromises = new Map<string, Promise<void>>();
+
 export async function loadLegacyRuntime(
   options: LegacyLoadOptions = {},
 ): Promise<LegacyRuntime> {
@@ -58,29 +60,52 @@ async function loadScripts(baseUrl: string): Promise<void> {
   }
 }
 
-function loadScript(src: string): Promise<void> {
-  return new Promise((resolve, reject) => {
+async function loadScript(src: string, force = false): Promise<void> {
+  if (!force && scriptPromises.has(src)) {
+    return scriptPromises.get(src)!;
+  }
+
+  const promise = new Promise<void>((resolve, reject) => {
+    if (force) {
+      document
+        .querySelectorAll(`script[data-hiprint-legacy-src="${src}"]`)
+        .forEach((node) => node.remove());
+      scriptPromises.delete(src);
+    }
+
     const existing = document.querySelector<HTMLScriptElement>(
       `script[data-hiprint-legacy-src="${src}"]`,
     );
 
-    if (existing) {
+    if (existing?.dataset.loaded === "true") {
       resolve();
       return;
     }
 
-    const script = document.createElement("script");
+    const script = existing ?? document.createElement("script");
     script.src = src;
     script.async = false;
     script.dataset["hiprintLegacySrc"] = src;
 
-    script.onload = () => resolve();
-    script.onerror = () => {
-      reject(new Error(`[hiprint-re] Failed to load legacy script: ${src}`));
+    script.onload = () => {
+      script.dataset["loaded"] = "true";
+      resolve();
     };
 
-    document.head.appendChild(script);
+    script.onerror = () => {
+      scriptPromises.delete(src);
+      reject(
+        new Error(`[hiprint-re] Failed to load legacy script: ${src}`),
+      );
+    };
+
+    if (!existing) {
+      document.head.appendChild(script);
+    }
   });
+
+  scriptPromises.set(src, promise);
+  return promise;
 }
 
 function joinUrl(baseUrl: string, path: string): string {

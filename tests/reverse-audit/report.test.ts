@@ -3,7 +3,7 @@ import path from "node:path";
 import { describe, expect, it } from "vitest";
 
 describe("reverse audit report", () => {
-  it("should have report directory after reverse scan", () => {
+  it("should have markdown report after reverse scan", () => {
     const reportDir = path.resolve(process.cwd(), "reports/reverse-audit");
 
     if (!fs.existsSync(reportDir)) {
@@ -11,7 +11,7 @@ describe("reverse audit report", () => {
       return;
     }
 
-    const manifest = path.join(reportDir, "manifest.json");
-    expect(fs.existsSync(manifest)).toBe(true);
+    const manifestMd = path.join(reportDir, "manifest.md");
+    expect(fs.existsSync(manifestMd)).toBe(true);
   });
 });

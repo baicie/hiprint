@@ -25,8 +25,7 @@ observable and patchable compatibility layer.
 ## Commands
 
 ```bash
-pnpm reverse:scan
-pnpm reverse:report
+pnpm reverse   # run scanner and generate reports
 pnpm dev
 ```
 
@@ -37,6 +36,10 @@ Generated under:
 ```txt
 reports/reverse-audit/
 ```
+
+The directory contains `manifest.md` (human-readable summary) and machine-readable
+JSON files (`manifest.json`, `globals.json`, etc.). JSON files are gitignored — they are
+regenerated on every `pnpm reverse` run and should not be committed.
 
 ## Rules
 

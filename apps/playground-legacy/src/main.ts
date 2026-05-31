@@ -1,8 +1,10 @@
 import {
   createLegacyHiprint,
-  downloadRuntimeSnapshot,
   type LegacyTemplateInstance,
 } from "@hiprint-re/legacy";
+import {
+  downloadRuntimeSnapshot,
+} from "@hiprint-re/legacy/debug";
 import { basicTemplate, basicData } from "./fixtures";
 import "./style.css";
 

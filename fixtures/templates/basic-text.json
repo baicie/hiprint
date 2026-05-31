@@ -1,0 +1,110 @@
+{
+  "panels": [{
+    "index": 0,
+    "height": 297,
+    "width": 210,
+    "paperHeader": 49.5,
+    "paperFooter": 780,
+    "printElements": [
+      {
+        "options": {
+          "left": 175.5,
+          "top": 10.5,
+          "height": 27,
+          "width": 259,
+          "title": "打印设计器示例",
+          "fontSize": 19,
+          "fontWeight": "600",
+          "textAlign": "center",
+          "lineHeight": 26
+        },
+        "printElementType": {
+          "title": "文本",
+          "type": "text"
+        }
+      },
+      {
+        "options": {
+          "left": 25.5,
+          "top": 57,
+          "height": 705,
+          "width": 9,
+          "fixed": true,
+          "borderStyle": "dotted"
+        },
+        "printElementType": {
+          "type": "vline"
+        }
+      },
+      {
+        "options": {
+          "left": 60,
+          "top": 61.5,
+          "height": 48,
+          "width": 87,
+          "src": "/Content/assets/hi.png"
+        },
+        "printElementType": {
+          "title": "图片",
+          "type": "image"
+        }
+      },
+      {
+        "options": {
+          "left": 415.5,
+          "top": 79.5,
+          "height": 13,
+          "width": 120,
+          "title": "姓名",
+          "field": "name",
+          "testData": "张三",
+          "color": "#f00808",
+          "textDecoration": "underline",
+          "textAlign": "center"
+        },
+        "printElementType": {
+          "title": "文本",
+          "type": "text"
+        }
+      },
+      {
+        "options": {
+          "left": 60,
+          "top": 190.5,
+          "height": 10,
+          "width": 475.5
+        },
+        "printElementType": {
+          "title": "横线",
+          "type": "hline"
+        }
+      },
+      {
+        "options": {
+          "left": 475.5,
+          "top": 565.5,
+          "height": 100,
+          "width": 100
+        },
+        "printElementType": {
+          "title": "矩形",
+          "type": "rect"
+        }
+      },
+      {
+        "options": {
+          "left": 60,
+          "top": 574.5,
+          "height": 100,
+          "width": 10
+        },
+        "printElementType": {
+          "title": "竖线",
+          "type": "vline"
+        }
+      }
+    ],
+    "paperNumberLeft": 565.5,
+    "paperNumberTop": 819
+  }]
+}

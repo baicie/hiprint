@@ -1,0 +1,200 @@
+{
+  "panels": [{
+    "index": 0,
+    "height": 297,
+    "width": 210,
+    "paperHeader": 0,
+    "paperFooter": 805,
+    "printElements": [
+      {
+        "options": {
+          "left": 20,
+          "top": 25,
+          "height": 42,
+          "width": 107,
+          "fontSize": 19,
+          "fontWeight": "700",
+          "textAlign": "center",
+          "lineHeight": 39,
+          "hideTitle": "1"
+        },
+        "printElementType": {
+          "title": "文本",
+          "type": "text"
+        }
+      },
+      {
+        "options": {
+          "left": 390,
+          "top": 35,
+          "height": 13,
+          "width": 165,
+          "field": "email",
+          "title": "邮箱"
+        },
+        "printElementType": {
+          "title": "文本",
+          "type": "text"
+        }
+      },
+      {
+        "options": {
+          "left": 390,
+          "top": 55,
+          "height": 13,
+          "width": 165,
+          "field": "address",
+          "title": "地址"
+        },
+        "printElementType": {
+          "title": "文本",
+          "type": "text"
+        }
+      },
+      {
+        "options": {
+          "left": 390,
+          "top": 75,
+          "height": 13,
+          "width": 165,
+          "field": "phone",
+          "title": "电话"
+        },
+        "printElementType": {
+          "title": "文本",
+          "type": "text"
+        }
+      },
+      {
+        "options": {
+          "left": 10,
+          "top": 110,
+          "height": 10,
+          "width": 573
+        },
+        "printElementType": {
+          "type": "hline"
+        }
+      },
+      {
+        "options": {
+          "left": 20,
+          "top": 135,
+          "height": 13,
+          "width": 27,
+          "title": "目标",
+          "textAlign": "center"
+        },
+        "printElementType": {
+          "title": "文本",
+          "type": "text"
+        }
+      },
+      {
+        "options": {
+          "left": 20,
+          "top": 160,
+          "height": 13,
+          "width": 562,
+          "fontSize": 13,
+          "field": "target",
+          "hideTitle": "1"
+        },
+        "printElementType": {
+          "title": "文本",
+          "type": "text"
+        }
+      },
+      {
+        "options": {
+          "left": 20,
+          "top": 195,
+          "height": 13,
+          "width": 29,
+          "title": "教育",
+          "textAlign": "center"
+        },
+        "printElementType": {
+          "title": "文本",
+          "type": "text"
+        }
+      },
+      {
+        "options": {
+          "left": 20,
+          "top": 230,
+          "height": 17,
+          "width": 561,
+          "fontSize": 12,
+          "fontWeight": "600",
+          "lineHeight": 17,
+          "field": "professional",
+          "hideTitle": "1"
+        },
+        "printElementType": {
+          "title": "文本",
+          "type": "text"
+        }
+      },
+      {
+        "options": {
+          "left": 20,
+          "top": 255,
+          "height": 15,
+          "width": 561,
+          "fontWeight": "600",
+          "field": "university",
+          "hideTitle": "1"
+        },
+        "printElementType": {
+          "title": "文本",
+          "type": "text"
+        }
+      },
+      {
+        "options": {
+          "left": 20,
+          "top": 280,
+          "height": 13,
+          "width": 120,
+          "field": "universityDate",
+          "hideTitle": "1"
+        },
+        "printElementType": {
+          "title": "文本",
+          "type": "text"
+        }
+      },
+      {
+        "options": {
+          "left": 20,
+          "top": 345,
+          "height": 40,
+          "width": 561,
+          "field": "tech",
+          "hideTitle": "1"
+        },
+        "printElementType": {
+          "title": "文本",
+          "type": "text"
+        }
+      },
+      {
+        "options": {
+          "left": 20,
+          "top": 420,
+          "height": 44,
+          "width": 559,
+          "field": "workExperience",
+          "hideTitle": "1"
+        },
+        "printElementType": {
+          "title": "文本",
+          "type": "text"
+        }
+      }
+    ],
+    "paperNumberLeft": 565,
+    "paperNumberTop": 819
+  }]
+}

@@ -1,0 +1,56 @@
+{
+  "panels": [{
+    "index": 0,
+    "height": 297,
+    "width": 210,
+    "printElements": [
+      {
+        "options": {
+          "left": 20,
+          "top": 20,
+          "height": 44,
+          "width": 511.5,
+          "field": "table",
+          "columns": [
+            [
+              {
+                "title": "序号",
+                "field": "index",
+                "width": 60,
+                "align": "center"
+              },
+              {
+                "title": "名称",
+                "field": "name",
+                "width": 150,
+                "align": "left"
+              },
+              {
+                "title": "数量",
+                "field": "quantity",
+                "width": 80,
+                "align": "center"
+              },
+              {
+                "title": "单价",
+                "field": "price",
+                "width": 100,
+                "align": "right"
+              },
+              {
+                "title": "金额",
+                "field": "amount",
+                "width": 100,
+                "align": "right"
+              }
+            ]
+          ]
+        },
+        "printElementType": {
+          "title": "表格",
+          "type": "tableCustom"
+        }
+      }
+    ]
+  }]
+}

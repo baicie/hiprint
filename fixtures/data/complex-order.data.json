@@ -1,0 +1,12 @@
+{
+  "name": "李四",
+  "email": "lisi@example.com",
+  "address": "北京市朝阳区某某街道123号",
+  "phone": "13800138000",
+  "target": "寻求Web前端开发岗位，负责业务系统开发和团队技术建设。",
+  "professional": "计算机科学与技术",
+  "university": "某某大学",
+  "universityDate": "2015.09 - 2019.06",
+  "tech": "熟练掌握HTML/CSS/JavaScript，熟悉Vue.js和React框架，了解Node.js后端开发，有良好的代码编写习惯和团队协作能力。",
+  "workExperience": "5年Web前端开发经验，主导过多个中后台管理系统和移动端H5项目，熟悉前端工程化和性能优化。"
+}

@@ -1,0 +1,23 @@
+{
+  "panels": [{
+    "index": 0,
+    "height": 100,
+    "width": 200,
+    "printElements": [
+      {
+        "options": {
+          "left": 20,
+          "top": 20,
+          "height": 60,
+          "width": 160,
+          "src": "/Content/assets/hi.png",
+          "title": "示例图片"
+        },
+        "printElementType": {
+          "title": "图片",
+          "type": "image"
+        }
+      }
+    ]
+  }]
+}

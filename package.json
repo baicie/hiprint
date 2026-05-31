@@ -11,14 +11,21 @@
     "test:watch": "vitest",
     "lint": "eslint .",
     "check": "pnpm typecheck && pnpm lint && pnpm test",
-    "check:fixtures": "tsx tools/scripts/check-fixtures.ts"
+    "check:fixtures": "tsx tools/scripts/check-fixtures.ts",
+    "reverse:scan": "tsx tools/reverse-audit/scan.ts",
+    "reverse:report": "tsx tools/reverse-audit/scan.ts",
+    "reverse": "pnpm reverse:scan && pnpm reverse:report"
   },
   "devDependencies": {
+    "@babel/parser": "^7.26.0",
+    "@babel/traverse": "^7.26.0",
+    "@babel/types": "^7.26.0",
     "@eslint/js": "^10.0.1",
     "@types/node": "^22.0.0",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "eslint": "^10.4.1",
+    "fast-glob": "^3.3.2",
     "globals": "^17.6.0",
     "jsdom": "^26.0.0",
     "tsx": "^4.0.0",

@@ -1,0 +1,243 @@
+[
+  {
+    "level": "high",
+    "category": "global-state",
+    "message": "Detected 4 global write patterns. These should be wrapped or patched before core extraction.",
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 72,
+        "column": 8
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5150,
+        "column": 49
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5544,
+        "column": 4
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.config.js",
+        "line": 2,
+        "column": 4
+      }
+    ]
+  },
+  {
+    "level": "medium",
+    "category": "dom-coupling",
+    "message": "Detected 7 DOM API usage groups. DOM logic should not move into core.",
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 121,
+        "column": 26
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 135,
+        "column": 26
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 965,
+        "column": 24
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5355,
+        "column": 16
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5387,
+        "column": 20
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7385,
+        "column": 32
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7479,
+        "column": 28
+      },
+      {
+        "file": "packages/legacy/vendor/polyfill.min.js",
+        "line": 1,
+        "column": 5068
+      },
+      {
+        "file": "packages/legacy/vendor/polyfill.min.js",
+        "line": 1,
+        "column": 5116
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 123,
+        "column": 16
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 137,
+        "column": 16
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1045,
+        "column": 20
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1048,
+        "column": 79
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1515,
+        "column": 71
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1517,
+        "column": 76
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1780,
+        "column": 16
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1806,
+        "column": 20
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1828,
+        "column": 20
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1852,
+        "column": 20
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1876,
+        "column": 20
+      }
+    ]
+  },
+  {
+    "level": "medium",
+    "category": "jquery-coupling",
+    "message": "Detected 16 jQuery API usage groups. jQuery dependency should stay in legacy/dom layer.",
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 108,
+        "column": 20
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 964,
+        "column": 22
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 978,
+        "column": 32
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1287,
+        "column": 44
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1287,
+        "column": 61
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1289,
+        "column": 16
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1291,
+        "column": 23
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1303,
+        "column": 24
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1304,
+        "column": 24
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1305,
+        "column": 24
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1306,
+        "column": 24
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1307,
+        "column": 79
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1308,
+        "column": 28
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1312,
+        "column": 28
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1316,
+        "column": 28
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1320,
+        "column": 16
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1320,
+        "column": 60
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1320,
+        "column": 105
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1320,
+        "column": 151
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1381,
+        "column": 26
+      }
+    ]
+  }
+]

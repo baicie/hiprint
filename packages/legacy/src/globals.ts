@@ -7,6 +7,8 @@ declare global {
     hiprintTemplateDesign?: unknown;
     $?: unknown;
     jQuery?: unknown;
+    __HIPRINT_RE_LEGACY_LOADED__?: boolean;
+    __HIPRINT_RE_RUNTIME_SNAPSHOT__?: unknown;
   }
 }
 

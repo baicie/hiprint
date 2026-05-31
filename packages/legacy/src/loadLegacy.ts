@@ -1,6 +1,7 @@
 import { invariant } from "@hiprint-re/shared";
 import type { LegacyLoadOptions, LegacyRuntime } from "./types";
 import { hasLegacyHiprint } from "./globals";
+import { applyLegacyPatches } from "./patches";
 
 let loadingPromise: Promise<LegacyRuntime> | undefined;
 
@@ -18,10 +19,14 @@ export async function loadLegacyRuntime(
   const { baseUrl = DEFAULT_VENDOR_BASE, force = false } = options;
 
   if (!force && hasLegacyHiprint()) {
-    return {
+    const runtime = {
       hiprint: window.hiprint!,
       rawWindow: window,
     };
+
+    applyLegacyPatches(runtime);
+
+    return runtime;
   }
 
   if (!force && loadingPromise) {
@@ -34,10 +39,14 @@ export async function loadLegacyRuntime(
       "Legacy hiprint global was not found after loading scripts.",
     );
 
-    return {
+    const runtime = {
       hiprint: window.hiprint!,
       rawWindow: window,
     };
+
+    applyLegacyPatches(runtime);
+
+    return runtime;
   });
 
   return loadingPromise;

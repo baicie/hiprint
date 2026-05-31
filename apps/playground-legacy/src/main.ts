@@ -1,4 +1,8 @@
-import { createLegacyHiprint, type LegacyTemplateInstance } from "@hiprint-re/legacy";
+import {
+  createLegacyHiprint,
+  downloadRuntimeSnapshot,
+  type LegacyTemplateInstance,
+} from "@hiprint-re/legacy";
 import { basicTemplate, basicData } from "./fixtures";
 import "./style.css";
 
@@ -63,4 +67,13 @@ document.querySelector("#json")?.addEventListener("click", () => {
 
   const json = legacy.getJson(templateInstance);
   log(json);
+});
+
+document.querySelector("#snapshot")?.addEventListener("click", async () => {
+  await legacy.load({
+    baseUrl: "/legacy/",
+  });
+
+  downloadRuntimeSnapshot();
+  log("Runtime snapshot downloaded.");
 });

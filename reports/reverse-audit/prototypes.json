@@ -1,0 +1,4684 @@
+[
+  {
+    "owner": "t",
+    "method": "init",
+    "count": 10,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 863,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1052,
+        "column": 11
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1380,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1422,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1457,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3525,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4003,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4087,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4259,
+        "column": 11
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7162,
+        "column": 19
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "updatePosition",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 883,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getDragingPrintElement",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 954,
+        "column": 12
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "setDragingPrintElement",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 956,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "guid",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 958,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "imageToBase64",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 963,
+        "column": 11
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7381,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "xhrLoadImage",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 975,
+        "column": 11
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7398,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "transformImg",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 975,
+        "column": 56
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7431,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getPrintTemplateById",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 980,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "setPrintTemplateById",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 982,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "setDefault",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1002,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "initSize",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1004,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "initSizeByHtml",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1006,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getLeft",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1008,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "displayLeft",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1010,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "setLeft",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1012,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getTop",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1014,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getTopInDesign",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1016,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "displayTop",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1018,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "setTop",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1020,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "copyDesignTopFromTop",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1022,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getHeight",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1024,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "displayHeight",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1026,
+        "column": 11
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5839,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "setHeight",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1028,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getWidth",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1030,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "displayWidth",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1032,
+        "column": 11
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5841,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "setWidth",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1034,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getValueFromOptionsOrDefault",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1036,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getPrintElementOptionEntity",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1038,
+        "column": 11
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3553,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "getConfigOptionsByName",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1078,
+        "column": 19
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "getProxyTarget",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1080,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "SetProxyTargetOption",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1085,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "showInPage",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1088,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "setTemplateId",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1101,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "setPanel",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1103,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "getField",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1105,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "getTitle",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1107,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "updateSizeAndPositionOptions",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1109,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "initSizeByHtml",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1111,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "updateTargetSize",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1117,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "updateTargetWidth",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1119,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "getDesignTarget",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1121,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "getPrintElementSelectEventKey",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1128,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "design",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1130,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "getPrintElementEntity",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1157,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "submitOption",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1159,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "getReizeableShowPoints",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1167,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "onResize",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1169,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "getOrderIndex",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1171,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "getHtml",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1173,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "getHtml2",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1189,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "getBeginPrintTopInPaperByReferenceElement",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1217,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "css",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1220,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "stylerCss",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1238,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "getData",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1247,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "getPrintElementOptionItems",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1249,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "getPrintElementOptionItemsByName",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1266,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "filterOptionItems",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1282,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "createTempContainer",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1286,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "removeTempContainer",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1288,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "getTempContainer",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1290,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "isHeaderOrFooter",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1292,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "delete",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1294,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "setCurrenttemplateData",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1296,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "isFixed",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1298,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "onRendered",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1300,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "createLineOfPosition",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1302,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "removeLineOfPosition",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1319,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "getFields",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1321,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "bingCopyEvent",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1324,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "getFormatter",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1324,
+        "column": 76
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "getStyler",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1333,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "bingKeyboardMoveEvent",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1342,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "inRect",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1364,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "multipleSelect",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1368,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "BasePrintElement",
+    "method": "updatePositionByMultipleSelect",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1370,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getValue",
+    "count": 77,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1382,
+        "column": 11
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1476,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1786,
+        "column": 11
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1810,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1834,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1858,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1882,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1906,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1922,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1944,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1969,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1994,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2019,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2045,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2071,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2097,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2122,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2148,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2174,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2191,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "setValue",
+    "count": 77,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1384,
+        "column": 11
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1478,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1789,
+        "column": 11
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1813,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1837,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1861,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1885,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1909,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1924,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1947,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1972,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1997,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2022,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2048,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2074,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2100,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2125,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2151,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2177,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2194,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "destroy",
+    "count": 76,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1386,
+        "column": 11
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1792,
+        "column": 11
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1816,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1840,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1864,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1888,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1911,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1926,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1949,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1974,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1999,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2025,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2051,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2077,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2102,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2128,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2156,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2180,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2196,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2222,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "createEditor",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1412,
+        "column": 16
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getDisplayHtml",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1427,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "beginEdit",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1429,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1465,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "endEdit",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1436,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1470,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getTarget",
+    "count": 4,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1474,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3527,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5784,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6928,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "initInnerEelement",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1478,
+        "column": 56
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "initEvent",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1480,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "isXYinCell",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1480,
+        "column": 56
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getTableRect",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1488,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "isOverlap",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1495,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "isInRect",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1498,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "isSelected",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1508,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "select",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1510,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "isHeader",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1512,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "setAlign",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1514,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4337,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "setVAlign",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1516,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4340,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getEntity",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1518,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "css",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1551,
+        "column": 28
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "isPositionLeftOrRight",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1765,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "css",
+    "count": 37,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1777,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1803,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1825,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1849,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1873,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1897,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1935,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1958,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1983,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2008,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2034,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2060,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2086,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2111,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2137,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2167,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2205,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2233,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2331,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2388,
+        "column": 19
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "createTarget",
+    "count": 77,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1784,
+        "column": 11
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1801,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1832,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1856,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1880,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1904,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1920,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1942,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1967,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 1992,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2017,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2043,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2069,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2095,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2120,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2146,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2165,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2189,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2212,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2231,
+        "column": 19
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "buildData",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 2980,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "loadFormatSelectByDataType",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3160,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "clear",
+    "count": 3,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3390,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7009,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7347,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "setSingleSelect",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3392,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getSingleSelect",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3394,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "singleSelectByXY",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3401,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "multipleSelectByXY",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3404,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "selectByRect",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3418,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getSelectedCells",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3425,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getCellByXY",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3427,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "getPrintElementOptionEntity",
+    "count": 3,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3504,
+        "column": 28
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4561,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6483,
+        "column": 28
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "initCells",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3529,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "removeCell",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3537,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "createTableCell",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3540,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "insertToTargetCellLeft",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3543,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "insertToTargetCellRight",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3546,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "insertCellToFirst",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3549,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "insertCellToLast",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3551,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "TablePrintElement",
+    "method": "getColumns",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3630,
+        "column": 57
+      }
+    ]
+  },
+  {
+    "owner": "TablePrintElement",
+    "method": "getColumnByColumnId",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3632,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "TablePrintElement",
+    "method": "updateDesignViewFromOptions",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3634,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "TablePrintElement",
+    "method": "css",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3641,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "TablePrintElement",
+    "method": "getDesignTarget",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3643,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "TablePrintElement",
+    "method": "getConfigOptions",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3654,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "TablePrintElement",
+    "method": "createTarget",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3656,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "TablePrintElement",
+    "method": "createGridColumnsStructure",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3662,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "TablePrintElement",
+    "method": "createtempEmptyRowsTargetStructure",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3676,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "TablePrintElement",
+    "method": "getTableHtml",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3680,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "TablePrintElement",
+    "method": "getEmptyRowTarget",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3686,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "TablePrintElement",
+    "method": "getHtml",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3688,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "TablePrintElement",
+    "method": "getPaperHtmlResult",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3692,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "TablePrintElement",
+    "method": "getRowsInSpecificHeight",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3726,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "TablePrintElement",
+    "method": "autoCompletion",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3782,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "TablePrintElement",
+    "method": "getData",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3788,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "TablePrintElement",
+    "method": "onResize",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3792,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "TablePrintElement",
+    "method": "getReizeableShowPoints",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3794,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "TablePrintElement",
+    "method": "design",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3796,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "TablePrintElement",
+    "method": "setHitable",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3825,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "TablePrintElement",
+    "method": "setColumnsOptions",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3850,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "TablePrintElement",
+    "method": "filterOptionItems",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3877,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "TablePrintElement",
+    "method": "getFooterFormatter",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3883,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "TablePrintElement",
+    "method": "getGridColumnsFooterFormatter",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3892,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "enableEidt",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3916,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4291,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "disableEdit",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3918,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4293,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "isEnableEdit",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 3920,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "resizeTableCellWidth",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4005,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "addResizeRowAndColumn",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4007,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "createColumnGrips",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4007,
+        "column": 68
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "updateColumnGrips",
+    "count": 3,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4037,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4087,
+        "column": 101
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4480,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "updateRowGrips",
+    "count": 3,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4039,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4087,
+        "column": 55
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4482,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "createRowGrips",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4041,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "syncGrips",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4065,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "syncRowGrips",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4071,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "addResizerHeadRow",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4080,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "insertRow",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4099,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "insertColumn",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4143,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "deleteRow",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4198,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "deleteColums",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4220,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "mergeCell",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4233,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "splitCell",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4245,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "initRows",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4273,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "initRowsByTrs",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4285,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getCellGrid",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4295,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getColumnStep",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4343,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "initContext",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4348,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getTableWidth",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4478,
+        "column": 11
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "getColumnByColumnId",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4550,
+        "column": 28
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "makeColumnObj",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4552,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "getGridColumns",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4559,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getByIndex",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 4597,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "addPrintElementTypes",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5569,
+        "column": 16
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getElementTypeGroups",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5574,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getElementType",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5576,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "formatterModule",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5581,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "createPrintElementTypeHtml",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5590,
+        "column": 19
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getText",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5617,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6427,
+        "column": 19
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "createPrintElement",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5619,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6431,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getData",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5624,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6429,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "createTableColumnArray",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5626,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getPrintElementTypeEntity",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5631,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6434,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getFields",
+    "count": 3,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5636,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6439,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7510,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getOptions",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5638,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6441,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getColumnByColumnId",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5640,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "makeColumnObj",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5642,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "getReizeableShowPoints",
+    "count": 4,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5676,
+        "column": 28
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6289,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6331,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6647,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "getData",
+    "count": 4,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5678,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5893,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6103,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6633,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "createTarget",
+    "count": 9,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5683,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5899,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6163,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6239,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6287,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6329,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6369,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6409,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6543,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "initSizeByHtml",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5686,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "getConfigOptions",
+    "count": 9,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5688,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5889,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6098,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6237,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6285,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6327,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6367,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6407,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6541,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "updateDesignViewFromOptions",
+    "count": 9,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5690,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5883,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6093,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6225,
+        "column": 28
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6280,
+        "column": 28
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6322,
+        "column": 28
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6362,
+        "column": 28
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6402,
+        "column": 28
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6518,
+        "column": 28
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "updateTargetImage",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5692,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "getHtml",
+    "count": 8,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5695,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5906,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6166,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6249,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6291,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6371,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6411,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6549,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "getHideTitle",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5726,
+        "column": 28
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6049,
+        "column": 28
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "subscribePaperBaseInfoChanged",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5745,
+        "column": 19
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "triggerOnPaperBaseInfoChanged",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5747,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "setFooter",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5756,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "setOffset",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5758,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "setLeftOffset",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5760,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "setTopOffset",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5762,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "createHeaderLine",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5766,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "createFooterLine",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5771,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "createPaperNumber",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5776,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "append",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5786,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "updateReferenceElement",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5788,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "updatePrintLine",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5790,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "design",
+    "count": 3,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5792,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6858,
+        "column": 19
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7270,
+        "column": 19
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "resetPaperNumber",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5807,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "updatePaperNumber",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5809,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "formatPaperNumber",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5812,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "dragHeadLineOrFootLine",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5814,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "resize",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5830,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6924,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getPaperFooter",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5832,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getContentHeight",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5835,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "createRuler",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5837,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getPanelTarget",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5843,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "getDesignTarget",
+    "count": 3,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5875,
+        "column": 28
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6086,
+        "column": 28
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6525,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "getProxyTarget",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5878,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6088,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "getTitle",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5891,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6100,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "updateTargetText",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5895,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6116,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "getText",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5902,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "getHeightByData",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5910,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "getLongTextIndent",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5914,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "getPaperHtmlResult",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5916,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6553,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "getStringBySpecificHeight",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5970,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "BinarySearch",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5974,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "IsPaginationIndex",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 5984,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "getTextType",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6051,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "getFontSize",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6053,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "getbarcodeMode",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6055,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "onResize",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6160,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6645,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "updateTargetHtml",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6230,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "getTableHtml",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6546,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "getRowsInSpecificHeight",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6587,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "autoCompletion",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6637,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "getEmptyRowTarget",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6643,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "design",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6649,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "setHiReizeable",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6678,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "createPrintElement",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6731,
+        "column": 28
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6761,
+        "column": 29
+      }
+    ]
+  },
+  {
+    "owner": "e",
+    "method": "getPrintElementTypeEntity",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6764,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "updateRect",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6844,
+        "column": 19
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "updatePositionByMultipleSelect",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6846,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getHtml",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6885,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7294,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "rotatePaper",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6926,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7308,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "enable",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6930,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "disable",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6932,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getPanelEntity",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6934,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "droppablePaper",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6964,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "initPrintElements",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6974,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "mathroundToporleft",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6984,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "appendDesignPrintElement",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6987,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "createNewPage",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6991,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "orderPrintElements",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 6994,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "fillPaperHeaderAndFooter",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7000,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "insertPrintElementToPanel",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7013,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "addPrintText",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7020,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "addPrintHtml",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7022,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "addPrintTable",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7024,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "addPrintImage",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7031,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "addPrintLongText",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7033,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "addPrintVline",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7035,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "addPrintHline",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7037,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "addPrintRect",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7039,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "addPrintOval",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7041,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getPrintElementTypeByEntity",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7043,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getPrintStyle",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7046,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7358,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getPrintSizeStyle",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7048,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "deletePrintElement",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7050,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7427,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getElementByTid",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7055,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7490,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getElementByName",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7061,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7492,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getFieldsInPanel",
+    "count": 2,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7067,
+        "column": 15
+      },
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7512,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "bindBatchMoveElement",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7072,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getElementInRect",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7079,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "updateRectPanel",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7084,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "bingKeyboardMoveEvent",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7107,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "buildSetting",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7162,
+        "column": 55
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "buildSettingByCustomOptions",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7196,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getValueByOptionItems",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7223,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "buildPagination",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7235,
+        "column": 19
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getSimpleHtml",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7282,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getJointHtml",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7296,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "setPaper",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7302,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "addPrintPanel",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7310,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "selectPanel",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7313,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "deletePanel",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7318,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getPaneltotal",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7320,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "createDefaultPanel",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7322,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "createContainer",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7327,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getJsonTid",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7329,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getJson",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7336,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getPrintElementSelectEventKey",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7343,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getBuildCustomOptionSettingEventKey",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7345,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getPaperType",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7354,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getOrient",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7356,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "print",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7360,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "print2",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7362,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "sentToClient",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7398,
+        "column": 60
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "printByHtml",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7404,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "printByHtml2",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7406,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "toPdf",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7436,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "createTempContainer",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7470,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "removeTempContainer",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7472,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getTempContainer",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7474,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "svg2canvas",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7476,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "on",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7483,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "clientIsOpened",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7485,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getPrinterList",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7487,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "getPanel",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7494,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "loadAllImages",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7496,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "setFields",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7508,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "t",
+    "method": "initAutoSave",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/hiprint.bundle.js",
+        "line": 7517,
+        "column": 15
+      }
+    ]
+  },
+  {
+    "owner": "AsyncIterator",
+    "method": "r",
+    "count": 1,
+    "locations": [
+      {
+        "file": "packages/legacy/vendor/polyfill.min.js",
+        "line": 1,
+        "column": 96180
+      }
+    ]
+  }
+]

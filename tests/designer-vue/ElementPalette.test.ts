@@ -30,4 +30,39 @@ describe("ElementPalette (Vue)", () => {
     expect(palette[3].text()).toBe("Line");
     expect(palette[4].text()).toBe("Table");
   });
+
+  it("should add and select an element from palette", async () => {
+    const onChange = vi.fn();
+
+    const wrapper = mount(PrintDesigner, {
+      props: {
+        template: basicTemplate,
+        templateKind: "legacy",
+        data: basicData,
+        onChange,
+      },
+      global: {
+        stubs: {
+          teleport: true,
+        },
+      },
+    });
+
+    await wrapper.vm.$nextTick();
+
+    const before = wrapper.findAll(".hiprint-designer-layer-item").length;
+
+    await wrapper.findAll(".hiprint-designer-palette-item")[0].trigger("click");
+    await wrapper.vm.$nextTick();
+    await wrapper.vm.$nextTick();
+
+    expect(wrapper.findAll(".hiprint-designer-layer-item").length).toBe(
+      before + 1,
+    );
+    expect(wrapper.find(".hiprint-designer-selection").exists()).toBe(true);
+    expect(wrapper.findAll(".hiprint-designer-panel").at(-1)?.text()).toContain(
+      "Content",
+    );
+    expect(onChange).toHaveBeenCalled();
+  });
 });

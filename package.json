@@ -36,6 +36,7 @@
     "dev:designer-react": "pnpm --filter @hiprint-re/playground-designer-react dev",
     "dev:designer-vue": "pnpm --filter @hiprint-re/playground-designer-vue dev",
     "test:designer-react": "vitest run tests/designer-react",
+    "test:designer-vue": "vitest run tests/designer-vue",
     "check:designer-react": "pnpm --filter @hiprint-re/designer-react typecheck && pnpm test:designer-react",
     "check:designer-vue": "pnpm --filter @hiprint-re/designer-vue typecheck && pnpm test:designer-vue"
   },
@@ -60,7 +61,7 @@
     "react-dom": "^19.2.6",
     "tsx": "^4.22.4",
     "typescript": "^6.0.3",
-    "vite": "^8.0.14",
-    "vitest": "^4.1.7"
+    "vite": "^8.0.16",
+    "vitest": "^4.1.8"
   }
 }

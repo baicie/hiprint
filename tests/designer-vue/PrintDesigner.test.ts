@@ -23,4 +23,32 @@ describe("PrintDesigner (Vue)", () => {
     expect(wrapper.find(".hiprint-designer-toolbar").exists()).toBe(true);
     expect(wrapper.find(".hiprint-designer-canvas").exists()).toBe(true);
   });
+
+  it("should select element from canvas hitbox", async () => {
+    const wrapper = mount(PrintDesigner, {
+      props: {
+        template: basicTemplate,
+        templateKind: "legacy",
+        data: basicData,
+      },
+      attachTo: document.body,
+      global: {
+        stubs: {
+          teleport: true,
+        },
+      },
+    });
+
+    for (let i = 0; i < 10; i++) {
+      await wrapper.vm.$nextTick();
+    }
+
+    const hitbox = wrapper.find(".hiprint-designer-hitbox");
+    expect(hitbox.exists()).toBe(true);
+
+    await hitbox.trigger("pointerdown");
+    await wrapper.vm.$nextTick();
+
+    expect(wrapper.find(".hiprint-designer-selection").exists()).toBe(true);
+  });
 });

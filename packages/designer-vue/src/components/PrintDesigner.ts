@@ -1,6 +1,7 @@
 import { defineComponent, h, computed, ref } from "vue";
 import type { HiprintPlugin } from "@hiprint-re/plugin";
-import { fromLegacyTemplate, normalizeTemplate } from "@hiprint-re/core";
+import { printLayout } from "@hiprint-re/dom";
+import { normalizeInputTemplate } from "../normalizeInputTemplate";
 import { DesignerToolbar } from "./DesignerToolbar";
 import { ElementPalette } from "./ElementPalette";
 import { DesignerCanvas } from "./DesignerCanvas";
@@ -9,6 +10,7 @@ import { LayerPanel } from "./LayerPanel";
 import { useDesignerStore } from "../composables/useDesignerStore";
 import { useDesignerPluginManager } from "../composables/useDesignerPluginManager";
 import { useDesignerKeyboard } from "../composables/useDesignerKeyboard";
+import "../style/designer.css";
 
 export const PrintDesigner = defineComponent({
   name: "HiprintVueDesigner",
@@ -42,20 +44,10 @@ export const PrintDesigner = defineComponent({
 
   emits: ["change", "layout", "error"],
 
-  setup(props, { emit }) {
-    const coreTemplate = computed(() => {
-      if (
-        props.templateKind === "core" ||
-        (props.templateKind === "auto" &&
-          props.template &&
-          typeof props.template === "object" &&
-          "schemaVersion" in props.template)
-      ) {
-        return normalizeTemplate(props.template as any);
-      }
-
-      return fromLegacyTemplate(props.template as any);
-    });
+  setup(props, { emit, expose }) {
+    const coreTemplate = computed(() =>
+      normalizeInputTemplate(props.template as any, props.templateKind as any),
+    );
 
     const { store, state } = useDesignerStore({
       template: coreTemplate,
@@ -80,6 +72,20 @@ export const PrintDesigner = defineComponent({
     function handleError(err: Error) {
       emit("error", err);
     }
+
+    async function print() {
+      if (!layoutRef.value) {
+        throw new Error("[hiprint-re/designer-vue] Layout is not ready.");
+      }
+
+      await printLayout(layoutRef.value, props.domOptions);
+    }
+
+    expose({
+      print,
+      getLayout: () => layoutRef.value,
+      getTemplate: () => store.value?.getStateRef().template,
+    });
 
     useDesignerKeyboard(
       () => store.value!,

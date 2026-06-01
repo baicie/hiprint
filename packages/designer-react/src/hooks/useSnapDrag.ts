@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { pxToMm } from "@hiprint-re/core";
 import {
   createClearInteractionCommand,
   createMoveElementCommand,
@@ -19,7 +20,7 @@ interface DragSession {
 }
 
 export function useSnapDrag() {
-  const { store, onChange } = useDesignerContext();
+  const { store, onChange, layoutOptions } = useDesignerContext();
   const commands = useDesignerCommands();
 
   const sessionRef = useRef<DragSession | null>(null);
@@ -52,8 +53,16 @@ export function useSnapDrag() {
 
     const zoom = currentState.viewport.zoom || 1;
 
-    const dx = (event.clientX - session.startX) / zoom;
-    const dy = (event.clientY - session.startY) / zoom;
+    const dx = toTemplateUnit(
+      (event.clientX - session.startX) / zoom,
+      currentState.template.paper.unit,
+      layoutOptions?.dpi,
+    );
+    const dy = toTemplateUnit(
+      (event.clientY - session.startY) / zoom,
+      currentState.template.paper.unit,
+      layoutOptions?.dpi,
+    );
 
     const others = getAllElements(currentState).filter(
       (element) => element.id !== moving.id,
@@ -114,4 +123,16 @@ export function useSnapDrag() {
   return {
     startDrag,
   };
+}
+
+function toTemplateUnit(
+  px: number,
+  unit: string | undefined,
+  dpi = 96,
+): number {
+  if (unit === "mm") {
+    return pxToMm(px, dpi);
+  }
+
+  return px;
 }

@@ -31,7 +31,7 @@ const app = createApp({
     <div class="app">
       <PrintDesigner
         :template="template"
-        template-kind="legacy"
+        template-kind="auto"
         :data="basicData"
         :dom-options="{ resolveImageSrc: resolveImageSrc }"
         @change="handleChange"

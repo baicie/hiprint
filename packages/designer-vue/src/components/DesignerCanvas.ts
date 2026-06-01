@@ -138,6 +138,7 @@ export const DesignerCanvas = defineComponent({
                       layout: layoutResult.value,
                       store: props.store,
                       state: props.state,
+                      dpi: props.layoutOptions.dpi ?? 96,
                       onChange: () => emit("change"),
                     })
                   : null,

@@ -1,4 +1,5 @@
 import { onBeforeUnmount, ref } from "vue";
+import { pxToMm } from "@hiprint-re/core";
 import type { ResizeHandle, DesignerStore, DesignerState } from "@hiprint-re/designer-core";
 import {
   createSelectElementCommand,
@@ -27,6 +28,9 @@ export function useCanvasPointer(
   storeRef: () => DesignerStore,
   stateRef: () => DesignerState,
   onChange: () => void,
+  options: {
+    dpi?: number;
+  } = {},
 ) {
   const sessionRef = ref<PointerSession | null>(null);
 
@@ -52,8 +56,8 @@ export function useCanvasPointer(
     sessionRef.value = {
       type: "drag",
       elementId,
-      startX: event.clientX,
-      startY: event.clientY,
+      startX: getClientX(event),
+      startY: getClientY(event),
     };
     window.addEventListener("pointerup", onPointerUp);
   }
@@ -65,8 +69,8 @@ export function useCanvasPointer(
       type: "resize",
       elementId,
       handle,
-      startX: event.clientX,
-      startY: event.clientY,
+      startX: getClientX(event),
+      startY: getClientY(event),
     };
     window.addEventListener("pointerup", onPointerUp);
   }
@@ -76,16 +80,24 @@ export function useCanvasPointer(
     if (!session) return;
 
     const zoom = stateRef().viewport.zoom || 1;
-    const dx = (event.clientX - session.startX) / zoom;
-    const dy = (event.clientY - session.startY) / zoom;
+    const screenDx = getClientX(event) - session.startX;
+    const screenDy = getClientY(event) - session.startY;
+    const dx = toTemplateUnit(screenDx / zoom);
+    const dy = toTemplateUnit(screenDy / zoom);
 
     if (session.type === "drag") {
-      moveSelected(dx, dy);
+      if (Math.abs(screenDx) > 1 || Math.abs(screenDy) > 1) {
+        moveSelected(dx, dy);
+      }
     } else {
-      resizeElement(session.elementId, session.handle, dx, dy);
+      if (Math.abs(screenDx) > 1 || Math.abs(screenDy) > 1) {
+        resizeElement(session.elementId, session.handle, dx, dy);
+      }
     }
 
-    onChange();
+    if (Math.abs(screenDx) > 1 || Math.abs(screenDy) > 1) {
+      onChange();
+    }
     sessionRef.value = null;
     window.removeEventListener("pointerup", onPointerUp);
   }
@@ -97,4 +109,22 @@ export function useCanvasPointer(
   });
 
   return { startDrag, startResize };
+
+  function toTemplateUnit(px: number): number {
+    const unit = stateRef().template.paper.unit;
+
+    if (unit === "mm") {
+      return pxToMm(px, options.dpi ?? 96);
+    }
+
+    return px;
+  }
+}
+
+function getClientX(event: PointerEvent): number {
+  return Number.isFinite(event.clientX) ? event.clientX : 0;
+}
+
+function getClientY(event: PointerEvent): number {
+  return Number.isFinite(event.clientY) ? event.clientY : 0;
 }

@@ -33,4 +33,35 @@ describe("history", () => {
 
     expect(store.getState().template.panels[0]!.elements).toHaveLength(1);
   });
+
+  it("should not fail when raw metadata contains non-structured-cloneable values", () => {
+    const template = createEmptyTemplate();
+    const panelId = template.panels[0]!.id;
+    template.raw = {
+      legacy: {
+        formatter() {
+          return "value";
+        },
+      },
+    };
+    const store = createDesignerStore({ template });
+
+    expect(() =>
+      store.dispatch(
+        createAddElementCommand({
+          panelId,
+          element: {
+            id: "text_1",
+            type: "text",
+            x: 0,
+            y: 0,
+            width: 10,
+            height: 10,
+          },
+        }),
+      ),
+    ).not.toThrow();
+
+    expect(store.getState().template.panels[0]!.elements).toHaveLength(1);
+  });
 });

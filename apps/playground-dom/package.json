@@ -1,0 +1,19 @@
+{
+  "name": "@hiprint-re/playground-dom",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@hiprint-re/core": "workspace:*",
+    "@hiprint-re/dom": "workspace:*"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0",
+    "typescript": "^5.0.0"
+  }
+}

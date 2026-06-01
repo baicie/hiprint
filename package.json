@@ -16,7 +16,10 @@
     "check:fixtures": "tsx tools/scripts/check-fixtures.ts",
     "reverse": "tsx tools/reverse-audit/scan.ts",
     "test:layout": "vitest run tests/core/layout",
-    "check:layout": "pnpm --filter @hiprint-re/core typecheck && pnpm test:layout"
+    "check:layout": "pnpm --filter @hiprint-re/core typecheck && pnpm test:layout",
+    "dev:dom": "pnpm --filter @hiprint-re/playground-dom dev",
+    "test:dom": "vitest run tests/dom",
+    "check:dom": "pnpm --filter @hiprint-re/dom typecheck && pnpm test:dom"
   },
   "devDependencies": {
     "@babel/parser": "^7.26.0",

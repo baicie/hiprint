@@ -1,4 +1,3 @@
-import type { PrintElementType } from "../types/element";
 import { builtinElementDefinitions } from "./builtinElements";
 import { ElementRegistry } from "./elementRegistry";
 

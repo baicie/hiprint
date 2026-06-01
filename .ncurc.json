@@ -1,0 +1,6 @@
+{
+  "ignore": [],
+  "reject": ["pnpm"],
+  "upgrade": true,
+  "deep": true
+}

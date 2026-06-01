@@ -1,8 +1,4 @@
-import type {
-  LayoutDocument,
-  LayoutElement,
-  LayoutPage,
-} from "@hiprint-re/core";
+import type { LayoutDocument } from "@hiprint-re/core";
 
 export interface DomRenderOptions {
   /**

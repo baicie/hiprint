@@ -1,5 +1,5 @@
 import { CORE_SCHEMA_VERSION } from "../version";
-import type { PaperConfig, PaperPreset } from "../types/paper";
+import type { PaperPreset } from "../types/paper";
 import type { PrintTemplate } from "../types/template";
 
 export const PAPER_PRESET_DIMENSIONS: Record<Exclude<PaperPreset, "custom">, { width: number; height: number }> = {

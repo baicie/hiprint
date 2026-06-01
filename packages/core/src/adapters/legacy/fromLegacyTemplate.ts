@@ -12,6 +12,16 @@ import type { PrintStyle } from "../../types/style";
 import { normalizeTemplate } from "../../schema/normalizeTemplate";
 import { mapLegacyElementType } from "./mapLegacyElementType";
 
+/**
+ * Legacy hiprint stores element geometry in px at 96dpi, not mm.
+ * This constant reflects that internal coordinate system.
+ */
+const LEGACY_DPI = 96;
+
+function pxToMm(px: number): number {
+  return (px / LEGACY_DPI) * 25.4;
+}
+
 export interface FromLegacyTemplateOptions {
   id?: string;
   name?: string;
@@ -96,10 +106,10 @@ function mapLegacyElement(
 
   const base = {
     id: createLegacyElementId(panelIndex, elementIndex, options),
-    x: toNumber(options.left, 0),
-    y: toNumber(options.top, 0),
-    width: toNumber(options.width, 0),
-    height: toNumber(options.height, 0),
+    x: pxToMm(toNumber(options.left, 0)),
+    y: pxToMm(toNumber(options.top, 0)),
+    width: pxToMm(toNumber(options.width, 0)),
+    height: pxToMm(toNumber(options.height, 0)),
     rotate: toNumber(options.rotate, undefined),
     hidden: options.hidden === true || options.hidden === 1,
     locked: options.fixed === true,

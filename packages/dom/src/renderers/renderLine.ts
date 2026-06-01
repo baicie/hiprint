@@ -1,6 +1,7 @@
 import type { LayoutLineElement, LayoutPage } from "@hiprint-re/core";
 import type { DomRenderContext } from "../types";
 import { applyElementBaseStyle } from "../style/applyElementStyle";
+import { cssLength } from "../style/cssLength";
 
 export function renderLine(
   element: LayoutLineElement,
@@ -18,12 +19,19 @@ export function renderLine(
   applyElementBaseStyle(dom, element, ctx);
 
   const color = String(element.style?.borderColor ?? "#111827");
-  const width = String(element.style?.borderWidth ?? 1);
+  const width =
+    typeof element.style?.borderWidth === "number"
+      ? cssLength(element.style.borderWidth, ctx.options.geometryUnit)
+      : "1px";
+  const style =
+    element.style?.borderStyle && element.style.borderStyle !== "none"
+      ? element.style.borderStyle
+      : "solid";
 
   if (element.direction === "vertical") {
-    dom.style.borderLeft = `${width}px solid ${color}`;
+    dom.style.borderLeft = `${width} ${style} ${color}`;
   } else {
-    dom.style.borderTop = `${width}px solid ${color}`;
+    dom.style.borderTop = `${width} ${style} ${color}`;
   }
 
   return dom;

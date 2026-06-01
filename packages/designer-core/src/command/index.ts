@@ -14,3 +14,4 @@ export * from "./commands/alignElements";
 export * from "./commands/distributeElements";
 export * from "./commands/setActivePanel";
 export * from "./commands/setViewport";
+export * from "./commands/setInteraction";

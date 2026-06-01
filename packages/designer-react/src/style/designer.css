@@ -294,10 +294,133 @@
   font-size: 13px;
 }
 
-.hiprint-designer-error {
-  margin: 0;
-  padding: 16px;
-  color: crimson;
-  white-space: pre-wrap;
-  word-break: break-word;
+/* Phase 8: Dynamic Property Panel */
+.hiprint-designer-property-group {
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 8px;
+}
+
+.hiprint-designer-property-group-title {
+  padding: 10px 12px 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.hiprint-designer-field select,
+.hiprint-designer-field textarea {
+  width: 100%;
+  min-height: 28px;
+  padding: 6px 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 12px;
+}
+
+.hiprint-designer-field textarea {
+  min-height: 72px;
+  resize: vertical;
+}
+
+.hiprint-designer-field.is-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hiprint-designer-field.is-checkbox input {
+  width: auto;
+}
+
+/* Phase 8: Snapline Overlay */
+.hiprint-designer-snapline-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.hiprint-designer-snapline {
+  position: absolute;
+  background: #ef4444;
+  pointer-events: none;
+}
+
+.hiprint-designer-snapline.is-vertical {
+  top: 0;
+  bottom: 0;
+  width: 1px;
+}
+
+.hiprint-designer-snapline.is-horizontal {
+  left: 0;
+  right: 0;
+  height: 1px;
+}
+
+/* Phase 8: Ruler */
+.hiprint-designer-ruler {
+  position: absolute;
+  background: #f9fafb;
+  color: #6b7280;
+  font-size: 10px;
+  user-select: none;
+  z-index: 3;
+}
+
+.hiprint-designer-ruler.is-horizontal {
+  top: 0;
+  left: 24px;
+  right: 0;
+  height: 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.hiprint-designer-ruler.is-vertical {
+  left: 0;
+  top: 24px;
+  bottom: 0;
+  width: 24px;
+  border-right: 1px solid #e5e7eb;
+}
+
+.hiprint-designer-ruler-tick {
+  position: absolute;
+}
+
+.hiprint-designer-ruler.is-horizontal .hiprint-designer-ruler-tick {
+  transform: translateX(-50%);
+}
+
+.hiprint-designer-ruler.is-vertical .hiprint-designer-ruler-tick {
+  transform: translateY(-50%);
+}
+
+/* Phase 8: Zoom Controls */
+.hiprint-designer-zoom {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.hiprint-designer-zoom button {
+  height: 28px;
+  padding: 0 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  min-width: 28px;
+}
+
+.hiprint-designer-zoom button:hover {
+  background: #f9fafb;
+}
+
+/* Phase 8: Paper container with ruler offsets */
+.hiprint-designer-paper-container {
+  position: relative;
 }

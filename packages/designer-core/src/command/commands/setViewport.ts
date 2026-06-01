@@ -1,5 +1,4 @@
 import type { DesignerCommand } from "../types";
-import type { DesignerViewport } from "../../types";
 
 export interface SetViewportCommandInput {
   zoom?: number;

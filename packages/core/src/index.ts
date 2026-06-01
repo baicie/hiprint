@@ -19,9 +19,12 @@ export * from "./model/TemplateModel";
 export * from "./model/createTemplateModel";
 export * from "./model/elementUtils";
 
+export * from "./property";
+
 export * from "./registry/elementRegistry";
 export * from "./registry/builtinElements";
 export * from "./registry/globalRegistry";
+export * from "./registry/builtinPropertySchemas";
 
 export * from "./adapters/legacy";
 

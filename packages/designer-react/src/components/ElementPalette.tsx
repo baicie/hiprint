@@ -1,48 +1,47 @@
 import { useDesignerState } from "../hooks/useDesignerState";
 import { useDesignerCommands } from "../hooks/useDesignerCommands";
-import {
-  createBuiltinElement,
-  type BuiltinInsertElementType,
-} from "../hooks/useElementFactory";
+import { useDesignerRegistry } from "../registry/DesignerRegistryContext";
+import type { PrintElementType } from "@hiprint-re/core";
 
-const items: Array<{
-  type: BuiltinInsertElementType;
-  label: string;
-}> = [
-  { type: "text", label: "Text" },
-  { type: "image", label: "Image" },
-  { type: "rect", label: "Rect" },
-  { type: "line", label: "Line" },
-  { type: "table", label: "Table" },
-];
+function createElementId(type: string): string {
+  return `${type}_${Math.random().toString(36).slice(2, 9)}`;
+}
 
 export function ElementPalette() {
   const state = useDesignerState();
   const commands = useDesignerCommands();
+  const registry = useDesignerRegistry();
 
   const panelId = state.activePanelId;
+  const elements = registry.list();
 
-  function add(type: BuiltinInsertElementType) {
+  function add(type: string) {
     if (!panelId) return;
 
-    commands.addElement(
-      panelId,
-      createBuiltinElement(type, { x: 20, y: 20 }),
-    );
+    const element = registry.createElement(type as PrintElementType, {
+      id: createElementId(type),
+      x: 20,
+      y: 20,
+    });
+
+    if (!element) return;
+
+    commands.addElement(panelId, element);
   }
 
   return (
     <div className="hiprint-designer-panel">
-      <div className="hiprint-designer-panel-title">Elements</div>
+      <div className="hiprint-designer-panel-title">元素</div>
 
       <div className="hiprint-designer-palette">
-        {items.map((item) => (
+        {elements.map((item) => (
           <button
             key={item.type}
             className="hiprint-designer-palette-item"
             onClick={() => add(item.type)}
+            title={item.description}
           >
-            {item.label}
+            {item.name}
           </button>
         ))}
       </div>

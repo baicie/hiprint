@@ -17,9 +17,38 @@ export interface DesignerClipboard {
   elements: PrintElement[];
 }
 
+export interface DesignerGuide {
+  id: string;
+  type: "vertical" | "horizontal";
+  position: number;
+}
+
+export interface DesignerSnapLine {
+  id: string;
+  type: "vertical" | "horizontal";
+  position: number;
+  sourceElementId?: string;
+  sourceGuideId?: string;
+}
+
+export interface DragGhost {
+  ids: string[];
+  dx: number;
+  dy: number;
+}
+
+export interface ResizeGhost {
+  id: string;
+  dx: number;
+  dy: number;
+}
+
 export interface DesignerInteraction {
   dragging?: DragState;
   resizing?: ResizeState;
+  dragGhost?: DragGhost;
+  resizeGhost?: ResizeGhost;
+  snapLines?: DesignerSnapLine[];
 }
 
 export interface DragState {
@@ -49,6 +78,7 @@ export interface DesignerState {
   viewport: DesignerViewport;
   clipboard: DesignerClipboard;
   interaction: DesignerInteraction;
+  guides: DesignerGuide[];
 }
 
 export interface DesignerStoreOptions {

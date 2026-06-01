@@ -1,14 +1,11 @@
 import { printLayout } from "@hiprint-re/dom";
-import { createSetViewportCommand } from "@hiprint-re/designer-core";
 import { useDesignerContext } from "../context/useDesignerContext";
 import { useDesignerLayout } from "../hooks/useDesignerLayout";
 import { useDesignerCommands } from "../hooks/useDesignerCommands";
 import { useDesignerState } from "../hooks/useDesignerState";
+import { TemplateActions } from "./TemplateActions";
+import { ZoomControls } from "./ZoomControls";
 import { useMemo } from "react";
-
-const MIN_ZOOM = 0.25;
-const MAX_ZOOM = 4;
-const ZOOM_STEP = 0.1;
 
 export function DesignerToolbar() {
   const ctx = useDesignerContext();
@@ -23,13 +20,6 @@ export function DesignerToolbar() {
     [state.selection.ids.length],
   );
 
-  const zoom = state.viewport.zoom;
-  const zoomPercent = useMemo(() => Math.round(zoom * 100), [zoom]);
-
-  function setZoom(next: number) {
-    ctx.store.dispatch(createSetViewportCommand({ zoom: next }));
-  }
-
   async function handlePrint() {
     if (!layout) return;
     await printLayout(layout, ctx.domOptions);
@@ -40,17 +30,17 @@ export function DesignerToolbar() {
       <button
         onClick={commands.undo}
         disabled={!canUndo}
-        title="Undo (Ctrl+Z)"
+        title="撤销 (Ctrl+Z)"
       >
-        Undo
+        撤销
       </button>
 
       <button
         onClick={commands.redo}
         disabled={!canRedo}
-        title="Redo (Ctrl+Shift+Z)"
+        title="重做 (Ctrl+Shift+Z)"
       >
-        Redo
+        重做
       </button>
 
       <span className="hiprint-designer-toolbar-separator" />
@@ -58,25 +48,25 @@ export function DesignerToolbar() {
       <button
         onClick={() => commands.align("left")}
         disabled={!hasSelection}
-        title="Align Left"
+        title="左对齐"
       >
-        Align Left
+        左对齐
       </button>
 
       <button
         onClick={() => commands.align("center")}
         disabled={!hasSelection}
-        title="Align Center"
+        title="居中对齐"
       >
-        Align Center
+        居中
       </button>
 
       <button
         onClick={() => commands.align("top")}
         disabled={!hasSelection}
-        title="Align Top"
+        title="顶对齐"
       >
-        Align Top
+        顶对齐
       </button>
 
       <span className="hiprint-designer-toolbar-separator" />
@@ -84,54 +74,35 @@ export function DesignerToolbar() {
       <button
         onClick={commands.duplicateSelected}
         disabled={!hasSelection}
-        title="Duplicate (Ctrl+D)"
+        title="复制 (Ctrl+D)"
       >
-        Duplicate
+        复制
       </button>
 
       <button
         onClick={commands.removeSelected}
         disabled={!hasSelection}
-        title="Delete (Delete)"
+        title="删除 (Delete)"
       >
-        Delete
+        删除
       </button>
 
       <span className="hiprint-designer-toolbar-separator" />
 
-      <button
-        onClick={() => setZoom(Math.max(zoom - ZOOM_STEP, MIN_ZOOM))}
-        disabled={zoom <= MIN_ZOOM}
-        title="Zoom Out"
-      >
-        -
-      </button>
+      <ZoomControls />
 
-      <span className="hiprint-designer-toolbar-zoom">{zoomPercent}%</span>
+      <span className="hiprint-designer-toolbar-separator" />
 
-      <button
-        onClick={() => setZoom(Math.min(zoom + ZOOM_STEP, MAX_ZOOM))}
-        disabled={zoom >= MAX_ZOOM}
-        title="Zoom In"
-      >
-        +
-      </button>
-
-      <button
-        onClick={() => setZoom(1)}
-        title="Zoom to 100%"
-      >
-        100%
-      </button>
+      <TemplateActions />
 
       <span className="hiprint-designer-toolbar-separator" />
 
       <button
         onClick={handlePrint}
         disabled={!layout}
-        title="Print"
+        title="打印"
       >
-        Print
+        打印
       </button>
     </div>
   );

@@ -22,5 +22,9 @@ export * from "./geometry/align";
 export * from "./geometry/distribute";
 export * from "./geometry/snap";
 
+export * from "./guides";
+
+export * from "./io";
+
 export * from "./keyboard/keymap";
 export * from "./keyboard/shortcuts";

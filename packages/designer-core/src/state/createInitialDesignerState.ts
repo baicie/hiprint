@@ -21,6 +21,9 @@ export function createInitialDesignerState(
     clipboard: {
       elements: [],
     },
-    interaction: {},
+    interaction: {
+      snapLines: [],
+    },
+    guides: [],
   };
 }

@@ -2,7 +2,7 @@ import { useDesignerKeyboard } from "../hooks/useDesignerKeyboard";
 import { DesignerToolbar } from "./DesignerToolbar";
 import { ElementPalette } from "./ElementPalette";
 import { DesignerCanvas } from "./DesignerCanvas";
-import { PropertyPanel } from "./PropertyPanel";
+import { DynamicPropertyPanel } from "./DynamicPropertyPanel";
 import { LayerPanel } from "./LayerPanel";
 import { StatusBar } from "./StatusBar";
 
@@ -32,7 +32,7 @@ export function DesignerShell(props: DesignerShellProps) {
         </main>
 
         <aside className="hiprint-designer-right">
-          <PropertyPanel />
+          <DynamicPropertyPanel />
         </aside>
       </div>
 

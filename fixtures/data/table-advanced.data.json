@@ -1,0 +1,27 @@
+{
+  "orderNo": "NO-20260601-001",
+  "customer": {
+    "name": "张三",
+    "phone": "138-0000-1234",
+    "address": "北京市朝阳区某街道"
+  },
+  "orderDate": "2026-06-01",
+  "salesman": "李四",
+  "items": [
+    { "index": 1, "name": "红富士苹果", "spec": "A级 5斤装", "quantity": 2, "price": 29.90, "amount": 59.80 },
+    { "index": 2, "name": "进口香蕉", "spec": "菲律宾产 3斤", "quantity": 3, "price": 18.50, "amount": 55.50 },
+    { "index": 3, "name": "新奇士橙子", "spec": "美国产 4斤", "quantity": 5, "price": 22.00, "amount": 110.00 },
+    { "index": 4, "name": "新疆哈密瓜", "spec": "大果 1个", "quantity": 1, "price": 45.00, "amount": 45.00 },
+    { "index": 5, "name": "泰国山竹", "spec": "进口 500g", "quantity": 2, "price": 35.00, "amount": 70.00 },
+    { "index": 6, "name": "智利车厘子", "spec": "J级 2斤", "quantity": 1, "price": 88.00, "amount": 88.00 },
+    { "index": 7, "name": "泰国榴莲", "spec": "金枕头 1个", "quantity": 1, "price": 128.00, "amount": 128.00 },
+    { "index": 8, "name": "日本阳光玫瑰", "spec": "无籽 2斤", "quantity": 2, "price": 68.00, "amount": 136.00 },
+    { "index": 9, "name": "云南蓝莓", "spec": "有机 125g*4", "quantity": 1, "price": 78.00, "amount": 78.00 },
+    { "index": 10, "name": "海南贵妃芒", "spec": "树上熟 3斤", "quantity": 3, "price": 25.00, "amount": 75.00 }
+  ],
+  "totalQuantity": 21,
+  "totalAmount": 845.30,
+  "discount": 45.30,
+  "finalAmount": 800.00,
+  "remark": "请于周一至周五 9:00-18:00 送达，提前或延后请联系业务员"
+}

@@ -101,7 +101,7 @@ describe("layout fixtures", () => {
       expect(tables.length).toBeGreaterThan(0);
 
       const totalRows = tables.reduce(
-        (sum, t) => sum + t.rows.length,
+        (sum, t) => sum + t.bodyRows.length,
         0,
       );
       expect(totalRows).toBeGreaterThan(0);

@@ -122,37 +122,21 @@ export interface LayoutRectElement extends LayoutElementBase {
   radius?: number;
 }
 
+import type { LayoutTableColumn, LayoutTableCell, LayoutTableRow } from "./tableTypes";
+import type { TableBorderOptions } from "../types/table";
+
+export * from "./tableTypes";
+
 export interface LayoutTableElement extends LayoutElementBase {
   type: "table";
   columns: LayoutTableColumn[];
-  rows: LayoutTableRow[];
-  headerHeight: number;
+  headerRows: LayoutTableRow[];
+  bodyRows: LayoutTableRow[];
+  footerRows: LayoutTableRow[];
   rowHeight: number;
-}
-
-export interface LayoutTableColumn {
-  id: string;
-  field?: string;
-  title?: string;
-  x: number;
-  width: number;
-}
-
-export interface LayoutTableRow {
-  index: number;
-  y: number;
-  height: number;
-  cells: LayoutTableCell[];
-  raw?: unknown;
-}
-
-export interface LayoutTableCell {
-  columnId: string;
-  value: string;
-  x: number;
-  y: number;
-  width: number;
-  height: number;
+  headerHeight: number;
+  footerHeight: number;
+  border?: TableBorderOptions;
 }
 
 export interface LayoutUnknownElement extends LayoutElementBase {

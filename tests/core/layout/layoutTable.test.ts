@@ -43,13 +43,15 @@ describe("layout table", () => {
 
     const table = layout.pages[0]!.elements[0] as {
       type?: string;
-      rows?: { cells: { value: string }[] }[];
+      headerRows?: unknown[];
+      bodyRows?: { cells: { value: string }[] }[];
     };
 
     expect(table.type).toBe("table");
-    expect(table.rows).toHaveLength(2);
-    expect(table.rows?.[0]?.cells[0]?.value).toBe("苹果");
-    expect(table.rows?.[0]?.cells[1]?.value).toBe("10");
+    expect(table.headerRows).toHaveLength(1);
+    expect(table.bodyRows).toHaveLength(2);
+    expect(table.bodyRows?.[0]?.cells[0]?.value).toBe("苹果");
+    expect(table.bodyRows?.[0]?.cells[1]?.value).toBe("10");
   });
 
   it("should create empty table when no data", () => {
@@ -71,10 +73,13 @@ describe("layout table", () => {
 
     const layout = layoutTemplate(template, {});
 
-    const table = layout.pages[0]!.elements[0] as { type?: string; rows?: unknown[] };
+    const table = layout.pages[0]!.elements[0] as {
+      type?: string;
+      bodyRows?: unknown[];
+    };
 
     expect(table.type).toBe("table");
-    expect(table.rows).toHaveLength(0);
+    expect(table.bodyRows).toHaveLength(0);
   });
 
   it("should paginate table across pages", () => {

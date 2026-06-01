@@ -8,6 +8,8 @@ export * from "./state/selectors";
 
 export * from "./command";
 
+export * from "./table";
+
 export * from "./history/types";
 export * from "./history/historyManager";
 

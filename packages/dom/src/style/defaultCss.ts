@@ -77,6 +77,11 @@ export function createDefaultCss(prefix = "hiprint-re"): string {
   background: #f9fafb;
 }
 
+.${prefix}-table-footer-cell {
+  font-weight: 600;
+  background: #f3f4f6;
+}
+
 .${prefix}-unknown {
   border: 1px dashed #9ca3af;
   color: #6b7280;

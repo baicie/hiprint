@@ -1,10 +1,31 @@
 import type {
   LayoutPage,
   LayoutTableElement,
+  LayoutTableRow,
 } from "@hiprint-re/core";
 import type { DomRenderContext } from "../types";
-import { applyElementBaseStyle } from "../style/applyElementStyle";
 import { cssLength } from "../style/cssLength";
+import { applyElementBaseStyle } from "../style/applyElementStyle";
+
+function resolveBorderStyle(
+  element: LayoutTableElement,
+): { borderColor: string; borderWidth: number; borderStyle: string } {
+  const defaults = {
+    borderColor: "#111827",
+    borderWidth: 1,
+    borderStyle: "solid",
+  };
+
+  if (element.border?.enabled === false) {
+    return { borderColor: "transparent", borderWidth: 0, borderStyle: "solid" };
+  }
+
+  return {
+    borderColor: element.border?.color ?? defaults.borderColor,
+    borderWidth: element.border?.width ?? defaults.borderWidth,
+    borderStyle: element.border?.style ?? defaults.borderStyle,
+  };
+}
 
 export function renderTable(
   element: LayoutTableElement,
@@ -13,7 +34,6 @@ export function renderTable(
 ): HTMLElement {
   const doc = ctx.document;
   const prefix = ctx.options.classNamePrefix;
-  const unit = ctx.options.geometryUnit;
 
   const root = doc.createElement("div");
   root.className = `${prefix}-element ${prefix}-table`;
@@ -22,41 +42,60 @@ export function renderTable(
 
   applyElementBaseStyle(root, element, ctx);
 
-  if (element.headerHeight > 0) {
-    for (const column of element.columns) {
-      const cell = doc.createElement("div");
-      cell.className = `${prefix}-table-cell ${prefix}-table-header-cell`;
+  const border = resolveBorderStyle(element);
 
-      cell.style.left = cssLength(column.x, unit);
-      cell.style.top = cssLength(0, unit);
-      cell.style.width = cssLength(column.width, unit);
-      cell.style.height = cssLength(element.headerHeight, unit);
-      cell.style.lineHeight = cssLength(element.headerHeight, unit);
+  renderRows(root, element.headerRows, element, ctx, "header", border);
+  renderRows(root, element.bodyRows, element, ctx, "body", border);
+  renderRows(root, element.footerRows, element, ctx, "footer", border);
 
-      cell.textContent = column.title ?? column.field ?? "";
+  return root;
+}
 
-      root.appendChild(cell);
-    }
-  }
+function renderRows(
+  root: HTMLElement,
+  rows: LayoutTableRow[],
+  table: LayoutTableElement,
+  ctx: DomRenderContext,
+  kind: "header" | "body" | "footer",
+  border: { borderColor: string; borderWidth: number; borderStyle: string },
+): void {
+  const doc = ctx.document;
+  const prefix = ctx.options.classNamePrefix;
 
-  for (const row of element.rows ?? []) {
-    const localY = row.y - element.y;
+  for (const row of rows) {
+    const localY = row.y - table.y;
 
     for (const cell of row.cells) {
-      const cellDom = doc.createElement("div");
-      cellDom.className = `${prefix}-table-cell`;
+      if (cell.hidden) continue;
 
-      cellDom.style.left = cssLength(cell.x, unit);
-      cellDom.style.top = cssLength(localY, unit);
-      cellDom.style.width = cssLength(cell.width, unit);
-      cellDom.style.height = cssLength(cell.height, unit);
-      cellDom.style.lineHeight = cssLength(cell.height, unit);
+      const cellDom = doc.createElement("div");
+
+      cellDom.className = [
+        `${prefix}-table-cell`,
+        `${prefix}-table-${kind}-cell`,
+      ].join(" ");
+
+      cellDom.style.left = cssLength(cell.x, ctx.options.geometryUnit);
+      cellDom.style.top = cssLength(localY, ctx.options.geometryUnit);
+      cellDom.style.width = cssLength(cell.width, ctx.options.geometryUnit);
+      cellDom.style.height = cssLength(cell.height, ctx.options.geometryUnit);
+      cellDom.style.lineHeight = cssLength(cell.height, ctx.options.geometryUnit);
+
+      if (cell.style?.textAlign) {
+        cellDom.style.textAlign = String(cell.style.textAlign);
+      }
+
+      if (border.borderWidth > 0) {
+        cellDom.style.border = [
+          cssLength(border.borderWidth, ctx.options.geometryUnit),
+          border.borderStyle,
+          border.borderColor,
+        ].join(" ");
+      }
 
       cellDom.textContent = cell.value;
 
       root.appendChild(cellDom);
     }
   }
-
-  return root;
 }

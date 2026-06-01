@@ -23,6 +23,7 @@ export * from "./components/SelectionOverlay";
 export * from "./components/ResizeHandles";
 export * from "./components/PropertyPanel";
 export * from "./components/DynamicPropertyPanel";
+export * from "./components/table";
 export * from "./components/PropertyField";
 export * from "./components/TemplateActions";
 export * from "./components/ZoomControls";

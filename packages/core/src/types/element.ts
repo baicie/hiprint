@@ -1,5 +1,17 @@
 import type { ID, UnknownRecord } from "./common";
 import type { PrintStyle } from "./style";
+export type { TableColumn, TableElementOptions } from "./table";
+export type { TableRowKind, TableColumnAlign } from "./table";
+export type {
+  TableHeaderOptions,
+  TableBodyOptions,
+  TableFooterOptions,
+  TableFooterRow,
+  TableFooterCell,
+  TablePaginationOptions,
+  TableMergeCell,
+  TableBorderOptions,
+} from "./table";
 
 export type PrintElementType =
   | "text"
@@ -61,24 +73,6 @@ export interface LineElementOptions extends UnknownRecord {
 
 export interface RectElementOptions extends UnknownRecord {
   radius?: number;
-}
-
-export interface TableColumn {
-  id: ID;
-  field?: string;
-  title?: string;
-  width?: number;
-  align?: "left" | "center" | "right";
-  children?: TableColumn[];
-  raw?: UnknownRecord;
-}
-
-export interface TableElementOptions extends UnknownRecord {
-  columns?: TableColumn[];
-  dataField?: string;
-  showHeader?: boolean;
-  rowHeight?: number;
-  headerHeight?: number;
 }
 
 export interface HtmlElementOptions extends UnknownRecord {

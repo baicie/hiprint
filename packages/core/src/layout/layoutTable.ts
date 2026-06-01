@@ -1,225 +1,196 @@
-import type { TableColumn, TableElement } from "../types/element";
-import type {
-  LayoutTableCell,
-  LayoutTableColumn,
-  LayoutTableElement,
-  LayoutTableRow,
-} from "./types";
+import type { TableElement } from "../types/element";
+import type { LayoutTableElement } from "./types";
 import type { LayoutElementInput } from "./layoutElement";
-import { getByPath, stringifyValue } from "./resolveBinding";
-import { normalizeYInPage, getPageIndexByY, safeNumber } from "./utils";
+import { normalizeYInPage, getPageIndexByY } from "./utils";
+import { normalizeTableOptions } from "../table/normalizeTableOptions";
+import { resolveTableData } from "../table/resolveTableData";
+import { resolveTableColumns } from "../table/resolveColumns";
+import {
+  createBodyRows,
+  createFooterRows,
+  createHeaderRows,
+} from "../table/createTableRows";
+import { paginateTableRows } from "../table/paginateTableRows";
+import type { TableBorderOptions } from "../types/table";
 
 export function layoutTable(input: LayoutElementInput): LayoutTableElement[] {
-  const { ctx, panel, element, pageHeight } = input;
+  const { ctx, panel, element, pageIndex, pageHeight } = input;
   const tableElement = element as TableElement;
 
-  const columns = normalizeColumns(
-    (tableElement.options?.columns as TableColumn[]) ?? [],
-    tableElement.width,
-  );
+  const options = normalizeTableOptions(tableElement.options);
+  const columns = resolveTableColumns(options.columns, tableElement.width);
+
+  const headerHeight = options.header?.show ? options.header.height : 0;
+  const rowHeight = options.body?.rowHeight ?? 8;
 
   const rowsData = resolveTableData(tableElement, ctx.data);
 
-  const headerHeight = safeNumber(tableElement.options?.headerHeight, 8);
-  const rowHeight = safeNumber(tableElement.options?.rowHeight, 8);
-  const showHeader = tableElement.options?.showHeader ?? true;
+  const headerRows = options.header?.show
+    ? createHeaderRows({
+        columns,
+        headerHeight,
+      })
+    : [];
 
-  const startY = tableElement.y;
-  const firstPageIndex = getPageIndexByY(startY, pageHeight);
+  const bodyRows = createBodyRows({
+    rowsData,
+    columns,
+    rowHeight,
+    startY: headerHeight,
+  });
 
-  const result: LayoutTableElement[] = [];
+  const footerRowsConfig = options.footer?.show ? options.footer.rows : [];
 
-  let currentPageIndex = firstPageIndex;
-  let currentY = normalizeYInPage(startY, pageHeight);
-
-  if (showHeader && currentY + headerHeight > pageHeight) {
-    currentPageIndex += 1;
-    currentY = 0;
-  }
-
-  let headerPlaced = false;
-
-  let currentRows: LayoutTableRow[] = [];
-  let currentTableY = currentY;
-
-  const startNewPage = () => {
-    flush();
-    currentPageIndex += 1;
-    currentY = 0;
-    currentTableY = 0;
-    headerPlaced = false;
-  };
-
-  const tryPlaceHeader = (): boolean => {
-    if (!showHeader) {
-      headerPlaced = true;
-      return true;
-    }
-    if (currentY + headerHeight > pageHeight) {
-      startNewPage();
-      return false;
-    }
-    headerPlaced = true;
-    return true;
-  };
-
-  const flush = () => {
-    if (currentRows.length === 0) return;
-
-    const tableHeight =
-      (showHeader ? headerHeight : 0) +
-      currentRows.reduce((sum, row) => sum + row.height, 0);
-
-    result.push({
-      id: `${tableElement.id}__page_${currentPageIndex}`,
-      sourcePanelId: panel.id,
-      sourceElementId: tableElement.id,
-      pageIndex: currentPageIndex,
-      type: "table",
-      x: tableElement.x,
-      y: currentTableY,
-      width: tableElement.width,
-      height: tableHeight,
-      columns,
-      rows: currentRows,
-      headerHeight: showHeader ? headerHeight : 0,
-      rowHeight,
-      hidden: tableElement.hidden,
-      style: tableElement.style,
-      raw: tableElement.raw,
-    });
-
-    currentRows = [];
-  };
-
-  for (let rowIndex = 0; rowIndex < rowsData.length; rowIndex++) {
-    if (!headerPlaced) {
-      if (!tryPlaceHeader()) continue;
-    }
-
-    const rowY =
-      currentRows.length === 0
-        ? currentY + (showHeader ? headerHeight : 0)
-        : currentRows[currentRows.length - 1]!.y + rowHeight;
-
-    if (rowY + rowHeight > pageHeight) {
-      startNewPage();
-    }
-
-    const row = createLayoutRow({
-      rowIndex,
-      rowData: rowsData[rowIndex],
-      columns,
-      rowY,
-      rowHeight,
-    });
-
-    currentRows.push(row);
-  }
-
-  flush();
-
-  if (result.length === 0) {
-    result.push({
-      id: `${tableElement.id}__page_${firstPageIndex}`,
-      sourcePanelId: panel.id,
-      sourceElementId: tableElement.id,
-      pageIndex: firstPageIndex,
-      type: "table",
-      x: tableElement.x,
-      y: normalizeYInPage(tableElement.y, pageHeight),
-      width: tableElement.width,
-      height: showHeader ? headerHeight : 0,
-      columns,
-      rows: [],
-      headerHeight: showHeader ? headerHeight : 0,
-      rowHeight,
-      hidden: tableElement.hidden,
-      style: tableElement.style,
-      raw: tableElement.raw,
-    });
-  }
-
-  return result;
-}
-
-function normalizeColumns(
-  columns: TableColumn[],
-  tableWidth: number,
-): LayoutTableColumn[] {
-  if (!columns.length) return [];
-
-  const explicitWidth = columns.reduce((sum, column) => {
-    return sum + (typeof column.width === "number" ? column.width : 0);
-  }, 0);
-
-  const missingWidthColumns = columns.filter(
-    (column) => typeof column.width !== "number",
+  const footerHeight = footerRowsConfig.reduce(
+    (sum, row) => sum + row.height,
+    0,
   );
 
-  const fallbackWidth =
-    missingWidthColumns.length > 0
-      ? Math.max(0, tableWidth - explicitWidth) / missingWidthColumns.length
-      : 0;
+  const footerRows = createFooterRows({
+    footerRows: footerRowsConfig,
+    columns,
+    data: ctx.data,
+    startY: 0,
+  });
 
-  let x = 0;
+  const firstPageIndex = getPageIndexByY(tableElement.y, pageHeight);
+  const tableStartY = normalizeYInPage(tableElement.y, pageHeight);
 
-  return columns.map((column) => {
-    const width =
-      typeof column.width === "number" ? column.width : fallbackWidth;
+  const pagination = options.pagination;
 
-    const result: LayoutTableColumn = {
-      id: column.id,
-      field: column.field,
-      title: column.title,
-      x,
-      width,
-    };
+  if (!pagination?.allowPageBreak) {
+    return [
+      createLayoutTableElement({
+        tableElement,
+        panelId: panel.id,
+        pageIndex,
+        tableY: tableStartY,
+        columns,
+        headerRows,
+        bodyRows,
+        footerRows,
+        headerHeight,
+        rowHeight,
+        footerHeight,
+        border: options.border,
+      }),
+    ];
+  }
 
-    x += width;
+  const slices = paginateTableRows({
+    bodyRows,
+    pageHeight,
+    tableStartY,
+    headerHeight,
+    footerHeight,
+    repeatHeader: pagination.repeatHeader,
+    footerMode: pagination.footerMode,
+  });
 
-    return result;
+  return slices.map((slice, sliceIndex) => {
+    const isLastSlice = sliceIndex === slices.length - 1;
+
+    const pageHeaderRows = pagination.repeatHeader
+      ? offsetRows(headerRows, slice.headerY)
+      : sliceIndex === 0
+        ? offsetRows(headerRows, slice.headerY)
+        : [];
+
+    const pageBodyRows = offsetRows(slice.bodyRows, slice.bodyStartY);
+
+    const shouldRenderFooter =
+      pagination.footerMode === "every-page" ||
+      (pagination.footerMode === "last-page" && isLastSlice);
+
+    const pageFooterRows =
+      shouldRenderFooter && typeof slice.footerY === "number"
+        ? offsetRows(footerRows, slice.footerY)
+        : [];
+
+    return createLayoutTableElement({
+      tableElement,
+      panelId: panel.id,
+      pageIndex: firstPageIndex + slice.pageIndexOffset,
+      tableY: slice.startY,
+      columns,
+      headerRows: pageHeaderRows,
+      bodyRows: pageBodyRows,
+      footerRows: pageFooterRows,
+      headerHeight: pageHeaderRows.reduce((sum, row) => sum + row.height, 0),
+      rowHeight,
+      footerHeight: pageFooterRows.reduce((sum, row) => sum + row.height, 0),
+      border: options.border,
+      idSuffix: `page_${sliceIndex}`,
+    });
   });
 }
 
-function resolveTableData(element: TableElement, data: unknown): unknown[] {
-  const dataField =
-    (element.options?.dataField as string) ?? element.binding?.field;
-
-  if (!dataField) return [];
-
-  const value = getByPath(data, dataField);
-
-  return Array.isArray(value) ? value : [];
-}
-
-function createLayoutRow(input: {
-  rowIndex: number;
-  rowData: unknown;
-  columns: LayoutTableColumn[];
-  rowY: number;
+function createLayoutTableElement(input: {
+  tableElement: TableElement;
+  panelId: string;
+  pageIndex: number;
+  tableY: number;
+  columns: ReturnType<typeof resolveTableColumns>;
+  headerRows: ReturnType<typeof createHeaderRows>;
+  bodyRows: ReturnType<typeof createBodyRows>;
+  footerRows: ReturnType<typeof createFooterRows>;
+  headerHeight: number;
   rowHeight: number;
-}): LayoutTableRow {
-  const cells: LayoutTableCell[] = input.columns.map((column) => {
-    const value = column.field
-      ? stringifyValue(getByPath(input.rowData, column.field))
-      : "";
+  footerHeight: number;
+  border?: TableBorderOptions;
+  idSuffix?: string;
+}): LayoutTableElement {
+  const allRows = [...input.headerRows, ...input.bodyRows, ...input.footerRows];
 
-    return {
-      columnId: column.id,
-      value,
-      x: column.x,
-      y: input.rowY,
-      width: column.width,
-      height: input.rowHeight,
-    };
-  });
+  const height =
+    allRows.length > 0
+      ? Math.max(...allRows.map((row) => row.y + row.height)) - input.tableY
+      : input.tableElement.height;
 
   return {
-    index: input.rowIndex,
-    y: input.rowY,
-    height: input.rowHeight,
-    cells,
-    raw: input.rowData,
+    id: input.idSuffix
+      ? `${input.tableElement.id}__${input.idSuffix}`
+      : input.tableElement.id,
+    sourcePanelId: input.panelId,
+    sourceElementId: input.tableElement.id,
+    pageIndex: input.pageIndex,
+    type: "table",
+    x: input.tableElement.x,
+    y: input.tableY,
+    width: input.tableElement.width,
+    height,
+    columns: input.columns,
+    headerRows: input.headerRows,
+    bodyRows: input.bodyRows,
+    footerRows: input.footerRows,
+    rowHeight: input.rowHeight,
+    headerHeight: input.headerHeight,
+    footerHeight: input.footerHeight,
+    border: input.border,
+    hidden: input.tableElement.hidden,
+    style: input.tableElement.style,
+    raw: input.tableElement.raw,
   };
+}
+
+function offsetRows<T extends { y: number; cells: Array<{ y: number }> }>(
+  rows: T[],
+  startY: number,
+): T[] {
+  if (rows.length === 0) return [];
+
+  const originalStart = rows[0]!.y;
+
+  return rows.map((row) => {
+    const dy = startY - originalStart;
+
+    return {
+      ...row,
+      y: row.y + dy,
+      cells: row.cells.map((cell) => ({
+        ...cell,
+        y: cell.y + dy,
+      })),
+    };
+  });
 }

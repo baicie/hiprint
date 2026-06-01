@@ -16,6 +16,6 @@ describe("PropertyPanel", () => {
       </div>,
     );
 
-    expect(container.textContent).toContain("Properties");
+    expect(container.textContent).toContain("属性");
   });
 });

@@ -2,6 +2,7 @@ import type { PrintElement } from "@hiprint-re/core";
 import { getElementById } from "@hiprint-re/designer-core";
 import { useDesignerState } from "../hooks/useDesignerState";
 import { useDesignerCommands } from "../hooks/useDesignerCommands";
+import { TablePropertyPanel } from "./table/TablePropertyPanel";
 
 export function PropertyPanel() {
   const state = useDesignerState();
@@ -17,6 +18,10 @@ export function PropertyPanel() {
         <div className="hiprint-designer-empty">No element selected</div>
       </div>
     );
+  }
+
+  if (element.type === "table") {
+    return <TablePropertyPanel elementId={element.id} />;
   }
 
   function update(patch: Partial<PrintElement>) {

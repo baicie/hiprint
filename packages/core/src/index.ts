@@ -1,3 +1,5 @@
+export * from "./types/table";
+
 export * from "./version";
 
 export * from "./types/common";
@@ -29,3 +31,10 @@ export * from "./registry/builtinPropertySchemas";
 export * from "./adapters/legacy";
 
 export * from "./layout";
+
+export * from "./table/defaults";
+export * from "./table/normalizeTableOptions";
+export * from "./table/resolveTableData";
+export * from "./table/resolveColumns";
+export * from "./table/createTableRows";
+export * from "./table/paginateTableRows";

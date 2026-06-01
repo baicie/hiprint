@@ -67,7 +67,7 @@ describe("PluginManager", () => {
     );
   });
 
-  it("should skip duplicate element type silently (already registered)", () => {
+  it("should throw on duplicate element type across plugins", () => {
     const plugin = createPlugin({
       name: "plugin-1",
       version: "0.0.0",
@@ -101,10 +101,12 @@ describe("PluginManager", () => {
     });
 
     const manager = createPluginManager([plugin]);
-    expect(() => manager.register(plugin2)).not.toThrow();
+    expect(() => manager.register(plugin2)).toThrow(
+      "[hiprint-re/plugin] Duplicate element type: shared-type",
+    );
   });
 
-  it("should skip duplicate dom renderer type silently", () => {
+  it("should throw on duplicate dom renderer type across plugins", () => {
     const plugin1 = createPlugin({
       name: "plugin-r1",
       version: "0.0.0",
@@ -128,7 +130,9 @@ describe("PluginManager", () => {
     });
 
     const manager = createPluginManager([plugin1]);
-    expect(() => manager.register(plugin2)).not.toThrow();
+    expect(() => manager.register(plugin2)).toThrow(
+      "[hiprint-re/plugin] Duplicate DOM renderer: same-type",
+    );
   });
 
   it("should get all element definitions", () => {

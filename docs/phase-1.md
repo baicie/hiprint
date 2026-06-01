@@ -29,6 +29,15 @@ pnpm reverse   # run scanner and generate reports
 pnpm dev
 ```
 
+## Acceptance
+
+- Reverse audit report covers all major legacy modules
+- `packages/legacy/src/patches/` contains at least one patch
+- `reverse-hiprint/output/cleaned/` is stable and documented
+- Legacy playground (`apps/playground-legacy`) runs without errors
+- `pnpm check:legacy` passes (typecheck + unit tests)
+- Fixtures in `fixtures/` cover at least 3 template types
+
 ## Reports
 
 Generated under:

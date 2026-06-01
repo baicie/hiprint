@@ -3,7 +3,7 @@ import type {
   LayoutTableColumn,
   LayoutTableRow,
 } from "../layout/tableTypes";
-import type { TableElementOptions, TableFooterRow } from "../types/table";
+import type { TableFooterRow } from "../types/table";
 import { getByPath, stringifyValue } from "../layout/resolveBinding";
 
 export function createHeaderRows(input: {
@@ -105,7 +105,6 @@ export function createFooterRows(input: {
         width: column.width,
         height: footerRow.height,
         colSpan: configured?.colSpan,
-        rowSpan: configured?.rowSpan,
         style: {
           ...footerRow.style,
           ...configured?.style,

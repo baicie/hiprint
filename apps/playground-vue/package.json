@@ -12,6 +12,7 @@
     "@hiprint-re/core": "workspace:*",
     "@hiprint-re/vue": "workspace:*",
     "@hiprint-re/designer-vue": "workspace:*",
+    "@hiprint-re/plugin": "workspace:*",
     "@hiprint-re/plugins-basic": "workspace:*",
     "vue": "^3.5.35"
   },

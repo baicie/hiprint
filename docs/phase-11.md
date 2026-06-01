@@ -110,3 +110,22 @@ const plugin: HiprintPlugin = {
 1. **CORS**: Image export via Canvas requires images to allow cross-origin access. If images are blocked by CORS, `canvas.toDataURL()` will fail.
 2. **Font subsetting**: PDF uses standard fonts by default. For CJK support, provide custom font bytes.
 3. **Complex text**: Basic line-wrapping is supported. Advanced typography may need custom renderers.
+
+## Deliverables
+
+- `@hiprint-re/render-core` package with shared renderer utilities
+- `@hiprint-re/svg` package with SVG rendering
+- `@hiprint-re/canvas` package with PNG export
+- `@hiprint-re/pdf` package with PDF export
+- Plugin renderer integration for SVG/Canvas/PDF targets
+- All renderer tests pass
+
+## Acceptance
+
+- `renderToSvgString()` produces valid SVG output matching DOM layout
+- `renderToCanvas()` produces PNG data URLs for each page
+- `exportPdfBytes()` generates valid PDF documents
+- Custom element renderers work across all three targets
+- `pnpm check:svg`, `pnpm check:canvas`, `pnpm check:pdf` all pass
+- Typecheck passes in `pnpm typecheck`
+- All renderer-related tests pass

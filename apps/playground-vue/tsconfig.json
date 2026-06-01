@@ -3,7 +3,7 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
     "moduleResolution": "Bundler",
@@ -16,7 +16,14 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": true
+    "noUncheckedIndexedAccess": true,
+    "paths": {
+      "@hiprint-re/core": ["../../packages/core/src"],
+      "@hiprint-re/vue": ["../../packages/vue/src"],
+      "@hiprint-re/designer-vue": ["../../packages/designer-vue/src"],
+      "@hiprint-re/plugin": ["../../packages/plugin/src"],
+      "@hiprint-re/plugins-basic": ["../../packages/plugins-basic/src"]
+    }
   },
   "include": ["src", "src/**/*.vue"]
 }

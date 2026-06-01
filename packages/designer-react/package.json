@@ -17,7 +17,8 @@
     "@hiprint-re/designer-core": "workspace:*",
     "@hiprint-re/svg": "workspace:*",
     "@hiprint-re/canvas": "workspace:*",
-    "@hiprint-re/pdf": "workspace:*"
+    "@hiprint-re/pdf": "workspace:*",
+    "@hiprint-re/plugin": "workspace:*"
   },
   "peerDependencies": {
     "react": ">=18.0.0",

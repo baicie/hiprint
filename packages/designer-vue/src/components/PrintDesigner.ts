@@ -1,4 +1,5 @@
 import { defineComponent, h, computed, ref } from "vue";
+import type { HiprintPlugin } from "@hiprint-re/plugin";
 import { fromLegacyTemplate, normalizeTemplate } from "@hiprint-re/core";
 import { DesignerToolbar } from "./DesignerToolbar";
 import { ElementPalette } from "./ElementPalette";
@@ -6,6 +7,7 @@ import { DesignerCanvas } from "./DesignerCanvas";
 import { PropertyPanel } from "./PropertyPanel";
 import { LayerPanel } from "./LayerPanel";
 import { useDesignerStore } from "../composables/useDesignerStore";
+import { useDesignerPluginManager } from "../composables/useDesignerPluginManager";
 import { useDesignerKeyboard } from "../composables/useDesignerKeyboard";
 
 export const PrintDesigner = defineComponent({
@@ -32,6 +34,10 @@ export const PrintDesigner = defineComponent({
       type: null,
       default: () => ({}),
     },
+    plugins: {
+      type: Array as () => HiprintPlugin[],
+      default: () => [],
+    },
   },
 
   emits: ["change", "layout", "error"],
@@ -54,6 +60,9 @@ export const PrintDesigner = defineComponent({
     const { store, state } = useDesignerStore({
       template: coreTemplate,
     });
+
+    const pluginManager = useDesignerPluginManager({ plugins: props.plugins });
+    const registry = computed(() => pluginManager.value.createElementRegistry());
 
     const layoutRef = ref<any>(null);
 
@@ -107,6 +116,7 @@ export const PrintDesigner = defineComponent({
                   h(ElementPalette, {
                     store: store.value,
                     state: state.value,
+                    registry: registry.value,
                     onChange: handleChange,
                   }),
                   h(LayerPanel, {

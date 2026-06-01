@@ -1,4 +1,3 @@
-import type { PrintElement } from "../types/element";
 import type { LayoutElement } from "./types";
 import type { LayoutElementInput } from "./layoutElement";
 import { normalizeYInPage } from "./utils";

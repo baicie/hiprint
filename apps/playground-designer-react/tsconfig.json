@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
     "moduleResolution": "Bundler",
@@ -15,7 +15,17 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": true
+    "noUncheckedIndexedAccess": true,
+    "paths": {
+      "@hiprint-re/core": ["../../packages/core/src"],
+      "@hiprint-re/designer-react": ["../../packages/designer-react/src"],
+      "@hiprint-re/designer-core": ["../../packages/designer-core/src"],
+      "@hiprint-re/plugin": ["../../packages/plugin/src"],
+      "@hiprint-re/svg": ["../../packages/svg/src"],
+      "@hiprint-re/canvas": ["../../packages/canvas/src"],
+      "@hiprint-re/pdf": ["../../packages/pdf/src"],
+      "@hiprint-re/dom": ["../../packages/dom/src"]
+    }
   },
   "include": ["src"]
 }

@@ -1,5 +1,6 @@
 import type { ID, UnknownRecord } from "./common";
 import type { PrintStyle } from "./style";
+import type { TableElementOptions } from "./table";
 export type { TableColumn, TableElementOptions } from "./table";
 export type { TableRowKind, TableColumnAlign } from "./table";
 export type {

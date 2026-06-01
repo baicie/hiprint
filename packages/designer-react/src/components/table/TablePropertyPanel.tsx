@@ -26,7 +26,7 @@ export function TablePropertyPanel(props: TablePropertyPanelProps) {
 
       <TableGeneralEditor tableId={element.id} options={options} />
 
-      <TableBorderEditor tableId={element.id} border={options.border} />
+      <TableBorderEditor tableId={element.id} border={options.border!} />
 
       <TableColumnEditor tableId={element.id} columns={options.columns} />
 

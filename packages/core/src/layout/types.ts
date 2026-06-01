@@ -122,7 +122,7 @@ export interface LayoutRectElement extends LayoutElementBase {
   radius?: number;
 }
 
-import type { LayoutTableColumn, LayoutTableCell, LayoutTableRow } from "./tableTypes";
+import type { LayoutTableColumn, LayoutTableRow } from "./tableTypes";
 import type { TableBorderOptions } from "../types/table";
 
 export * from "./tableTypes";

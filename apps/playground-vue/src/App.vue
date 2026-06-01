@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, shallowRef } from "vue";
 import { PrintPreview } from "@hiprint-re/vue";
 import { PrintDesigner } from "@hiprint-re/designer-vue";
 
@@ -9,7 +9,8 @@ import basicData from "../../../fixtures/data/basic-text.data.json";
 type Mode = "preview" | "designer";
 
 const mode = ref<Mode>("designer");
-const data = ref<Record<string, unknown>>(basicData);
+const template = shallowRef<any>(basicTemplate);
+const data = shallowRef<Record<string, unknown>>(basicData);
 
 const designerRef = ref<{
   print?: () => Promise<void>;
@@ -25,6 +26,7 @@ function setMode(nextMode: Mode) {
 }
 
 function handleDesignerChange(nextTemplate: unknown) {
+  template.value = nextTemplate;
   console.log("[vue designer change]", nextTemplate);
 }
 
@@ -71,7 +73,7 @@ async function print() {
       <PrintDesigner
         v-if="mode === 'designer'"
         ref="designerRef"
-        :template="basicTemplate"
+        :template="template"
         template-kind="auto"
         :data="data"
         @change="handleDesignerChange"
@@ -81,7 +83,7 @@ async function print() {
       <PrintPreview
         v-else
         ref="previewRef"
-        :template="basicTemplate"
+        :template="template"
         template-kind="auto"
         :data="data"
         @warnings="handleWarnings"

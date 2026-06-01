@@ -32,7 +32,13 @@ export function PropertyField(props: PropertyFieldProps) {
         <select
           value={String(value ?? field.defaultValue ?? "")}
           disabled={field.readonly}
-          onChange={(event) => props.onChange(event.target.value)}
+          onChange={(event) => {
+            const selected = field.options?.find(
+              (option) => String(option.value) === event.target.value,
+            );
+
+            props.onChange(selected ? selected.value : event.target.value);
+          }}
         >
           <option value="">请选择</option>
           {field.options?.map((option) => (

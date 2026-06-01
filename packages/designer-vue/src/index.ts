@@ -2,6 +2,7 @@ export * from "./normalizeInputTemplate";
 
 export * from "./composables/useDesignerStore";
 export * from "./composables/useDesignerKeyboard";
+export * from "./composables/useDesignerPluginManager";
 export * from "./composables/useCanvasPointer";
 
 export * from "./components/PrintDesigner";

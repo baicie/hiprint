@@ -14,7 +14,8 @@
   "dependencies": {
     "@hiprint-re/core": "workspace:*",
     "@hiprint-re/dom": "workspace:*",
-    "@hiprint-re/designer-core": "workspace:*"
+    "@hiprint-re/designer-core": "workspace:*",
+    "@hiprint-re/plugin": "workspace:*"
   },
   "peerDependencies": {
     "vue": ">=3.4.0"

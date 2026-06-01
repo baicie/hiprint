@@ -1,7 +1,4 @@
-import type {
-  LayoutDocument,
-  LayoutElement,
-} from "@hiprint-re/core";
+import type { LayoutDocument } from "@hiprint-re/core";
 import type { SvgRenderOptions, SvgRenderContext } from "./types";
 import { renderSvgElement } from "./renderers/renderSvgElement";
 

@@ -4,10 +4,7 @@ import {
   type ElementDefinition,
   type ElementRegistry,
 } from "@hiprint-re/core";
-import type {
-  HiprintPlugin,
-  PluginDomRenderer,
-} from "@hiprint-re/plugin";
+import type { HiprintPlugin, PluginDomRenderer } from "./types";
 import type {
   SvgElementRenderer,
 } from "@hiprint-re/svg";
@@ -72,7 +69,9 @@ export class PluginManager {
 
   registerElement(definition: ElementDefinition): void {
     if (this.elementDefinitions.some((item) => item.type === definition.type)) {
-      return;
+      throw new Error(
+        `[hiprint-re/plugin] Duplicate element type: ${definition.type}`,
+      );
     }
 
     this.elementDefinitions.push(definition);
@@ -80,7 +79,9 @@ export class PluginManager {
 
   registerDomRenderer(renderer: PluginDomRenderer): void {
     if (this.domRenderers.has(renderer.type)) {
-      return;
+      throw new Error(
+        `[hiprint-re/plugin] Duplicate DOM renderer: ${renderer.type}`,
+      );
     }
 
     this.domRenderers.set(renderer.type, renderer);
@@ -88,7 +89,9 @@ export class PluginManager {
 
   registerSvgRenderer(renderer: SvgElementRenderer): void {
     if (this.svgRenderers.has(renderer.type)) {
-      return;
+      throw new Error(
+        `[hiprint-re/plugin] Duplicate SVG renderer: ${renderer.type}`,
+      );
     }
 
     this.svgRenderers.set(renderer.type, renderer);
@@ -96,7 +99,9 @@ export class PluginManager {
 
   registerCanvasRenderer(renderer: CanvasElementRenderer): void {
     if (this.canvasRenderers.has(renderer.type)) {
-      return;
+      throw new Error(
+        `[hiprint-re/plugin] Duplicate Canvas renderer: ${renderer.type}`,
+      );
     }
 
     this.canvasRenderers.set(renderer.type, renderer);
@@ -104,7 +109,9 @@ export class PluginManager {
 
   registerPdfRenderer(renderer: PdfElementRenderer): void {
     if (this.pdfRenderers.has(renderer.type)) {
-      return;
+      throw new Error(
+        `[hiprint-re/plugin] Duplicate PDF renderer: ${renderer.type}`,
+      );
     }
 
     this.pdfRenderers.set(renderer.type, renderer);

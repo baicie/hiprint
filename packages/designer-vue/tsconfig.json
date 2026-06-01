@@ -1,9 +1,14 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "dist",
-    "rootDir": "src",
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "paths": {
+      "@hiprint-re/core": ["../core/src"],
+      "@hiprint-re/dom": ["../dom/src"],
+      "@hiprint-re/designer-core": ["../designer-core/src"],
+      "@hiprint-re/plugin": ["../plugin/src"]
+    }
   },
   "include": ["src"]
 }

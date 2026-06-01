@@ -1,5 +1,4 @@
 import type { LayoutImageElement } from "@hiprint-re/core";
-import { rgb } from "pdf-lib";
 import type { PdfRenderContext } from "../types";
 import { toPdfPt, yToPdf } from "../unit";
 
@@ -10,8 +9,6 @@ export async function renderPdfImage(
   if (!element.src) return;
 
   let imageBytes: Uint8Array;
-  let width: number;
-  let height: number;
 
   if (element.src.startsWith("data:image/png;base64,")) {
     const b64 = element.src.replace("data:image/png;base64,", "");
@@ -20,17 +17,16 @@ export async function renderPdfImage(
     for (let i = 0; i < binary.length; i++) {
       imageBytes[i] = binary.charCodeAt(i);
     }
-    width = element.width;
-    height = element.height;
-  } else if (element.src.startsWith("data:image/jpeg;base64,") || element.src.startsWith("data:image/jpg;base64,")) {
+  } else if (
+    element.src.startsWith("data:image/jpeg;base64,") ||
+    element.src.startsWith("data:image/jpg;base64,")
+  ) {
     const b64 = element.src.replace(/^data:image\/jpe?g;base64,/, "");
     const binary = atob(b64);
     imageBytes = new Uint8Array(binary.length);
     for (let i = 0; i < binary.length; i++) {
       imageBytes[i] = binary.charCodeAt(i);
     }
-    width = element.width;
-    height = element.height;
   } else {
     return;
   }

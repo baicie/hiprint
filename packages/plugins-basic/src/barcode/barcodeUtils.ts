@@ -1,6 +1,4 @@
-import type { LayoutElement } from "@hiprint-re/core";
-import { cssLength } from "@hiprint-re/dom";
-import { encodePseudoCode128, type BarcodeBar } from "./encodeCode128";
+import { encodePseudoCode128 } from "./encodeCode128";
 
 export function createBarcodeSvg(
   doc: Document,

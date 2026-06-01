@@ -112,3 +112,15 @@ business plugin:
 - **barcode**: Pseudo Code128 encoding (not scanable without full encoder)
 - **qrcode**: Pseudo QR pattern (not scanable without full encoder)
 - **html**: Trusted templates only (XSS risk with untrusted input)
+
+## Acceptance
+
+- `@hiprint-re/plugin` package builds without errors
+- `@hiprint-re/plugins-basic` package builds without errors
+- `PluginManager` correctly registers elements and renderers
+- Duplicate element/renderer registration throws `Error`
+- `barcodePlugin()`, `qrcodePlugin()`, `htmlPlugin()` all work correctly
+- Designer palette shows elements from loaded plugins
+- `pnpm check:plugin` passes
+- All 10 plugin manager tests pass
+- Typecheck passes in `pnpm typecheck`

@@ -1,5 +1,5 @@
-import type { PrintStyle } from "../../types/style";
-import type { TableRowKind } from "../../types/table";
+import type { PrintStyle } from "../types/style";
+import type { TableRowKind } from "../types/table";
 
 export interface LayoutTableColumn {
   id: string;

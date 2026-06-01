@@ -142,44 +142,4 @@ export const builtinElementDefinitions: ElementDefinition[] = [
       };
     },
   },
-  {
-    type: "barcode",
-    name: "Barcode",
-    builtin: true,
-    defaultWidth: 60,
-    defaultHeight: 20,
-    createElement(input) {
-      return {
-        id: input.id,
-        type: "barcode",
-        x: input.x,
-        y: input.y,
-        width: 60,
-        height: 20,
-        options: {
-          value: "12345678",
-        },
-      };
-    },
-  },
-  {
-    type: "qrcode",
-    name: "QRCode",
-    builtin: true,
-    defaultWidth: 30,
-    defaultHeight: 30,
-    createElement(input) {
-      return {
-        id: input.id,
-        type: "qrcode",
-        x: input.x,
-        y: input.y,
-        width: 30,
-        height: 30,
-        options: {
-          value: "https://",
-        },
-      };
-    },
-  },
 ];

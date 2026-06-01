@@ -26,7 +26,7 @@ describe("ElementPalette (Vue)", () => {
     expect(palette.length).toBe(5);
     expect(palette[0].text()).toBe("Text");
     expect(palette[1].text()).toBe("Image");
-    expect(palette[2].text()).toBe("Rect");
+    expect(palette[2].text()).toBe("Rectangle");
     expect(palette[3].text()).toBe("Line");
     expect(palette[4].text()).toBe("Table");
   });

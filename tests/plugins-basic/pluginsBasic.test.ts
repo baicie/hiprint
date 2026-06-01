@@ -8,8 +8,38 @@ import {
 } from "../../packages/plugins-basic/src";
 
 describe("plugins-basic", () => {
+  describe("builtin elements", () => {
+    it("should have text/image/rect/line/table in default registry", () => {
+      // Default manager preloads builtinElementDefinitions (text/image/rect/line/table).
+      // Barcode/qrcode come from plugins-basic, not builtins.
+      const manager = createPluginManager([]);
+      const registry = manager.createElementRegistry();
+
+      expect(registry.has("text")).toBe(true);
+      expect(registry.has("image")).toBe(true);
+      expect(registry.has("rect")).toBe(true);
+      expect(registry.has("line")).toBe(true);
+      expect(registry.has("table")).toBe(true);
+      expect(registry.has("barcode")).toBe(false);
+      expect(registry.has("qrcode")).toBe(false);
+
+      const textDef = registry.get("text");
+      expect(textDef?.name).toBe("Text");
+    });
+
+    it("builtin elements should not have DOM renderers preloaded", () => {
+      // Builtins only provide element definitions, not renderers.
+      // Renderers come from plugins.
+      const manager = createPluginManager([]);
+      expect(manager.getDomRenderer("text")).toBeUndefined();
+      expect(manager.getDomRenderer("image")).toBeUndefined();
+      expect(manager.getDomRenderer("barcode")).toBeUndefined();
+      expect(manager.getDomRenderer("qrcode")).toBeUndefined();
+    });
+  });
+
   describe("barcodePlugin", () => {
-    it("should register barcode element and renderer", () => {
+    it("should add barcode element and renderer", () => {
       const manager = createPluginManager([barcodePlugin()]);
 
       const registry = manager.createElementRegistry();
@@ -25,7 +55,7 @@ describe("plugins-basic", () => {
   });
 
   describe("qrcodePlugin", () => {
-    it("should register qrcode element and renderer", () => {
+    it("should add qrcode element and renderer", () => {
       const manager = createPluginManager([qrcodePlugin()]);
 
       const registry = manager.createElementRegistry();

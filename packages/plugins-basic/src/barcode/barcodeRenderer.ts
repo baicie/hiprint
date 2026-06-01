@@ -1,6 +1,5 @@
 import type { LayoutElement } from "@hiprint-re/core";
 import type { PluginDomRenderer } from "@hiprint-re/plugin";
-import type { DomRenderContext } from "@hiprint-re/dom";
 import { cssLength } from "@hiprint-re/dom";
 import { createBarcodeSvg } from "./barcodeUtils";
 

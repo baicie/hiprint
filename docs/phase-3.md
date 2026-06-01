@@ -144,3 +144,10 @@ Advanced features are deferred.
 - [x] `pnpm check:layout` passes
 - [x] `docs/phase-3.md` complete
 - [x] `docs/layout.md` complete
+
+## Deliverables
+
+- `packages/core/src/layout/` — layout engine (unit, paper, position, bounds, pagination, table-pagination)
+- `packages/core/src/model/` — TemplateModel and element utilities
+- `fixtures/templates/` — Real print template JSONs for regression testing
+- `docs/layout.md` — Layout API documentation

@@ -7,6 +7,20 @@ export interface TableGeneralEditorProps {
   options: TableElementOptions;
 }
 
+const DEFAULT_HEADER = {
+  show: true,
+  repeatOnPageBreak: false,
+  height: 30,
+};
+
+const DEFAULT_PAGINATION = {
+  enabled: false,
+  repeatHeader: true,
+  footerMode: "last-page" as const,
+  rowBreakMode: "avoid" as const,
+  allowPageBreak: true,
+};
+
 export function TableGeneralEditor(props: TableGeneralEditorProps) {
   const { store, onChange } = useDesignerContext();
 
@@ -45,6 +59,7 @@ export function TableGeneralEditor(props: TableGeneralEditorProps) {
           onChange={(event) =>
             update({
               header: {
+                ...DEFAULT_HEADER,
                 ...props.options.header,
                 show: event.target.checked,
               },
@@ -61,6 +76,7 @@ export function TableGeneralEditor(props: TableGeneralEditorProps) {
           onChange={(event) =>
             update({
               pagination: {
+                ...DEFAULT_PAGINATION,
                 ...props.options.pagination,
                 repeatHeader: event.target.checked,
               },
@@ -73,12 +89,12 @@ export function TableGeneralEditor(props: TableGeneralEditorProps) {
         <span>Row Height</span>
         <input
           type="number"
-          value={props.options.body?.rowHeight ?? 8}
+          value={props.options.body?.rowHeight ?? 30}
           onChange={(event) =>
             update({
               body: {
-                ...props.options.body,
                 rowHeight: Number(event.target.value),
+                ...props.options.body,
               },
             })
           }
@@ -89,10 +105,11 @@ export function TableGeneralEditor(props: TableGeneralEditorProps) {
         <span>Header Height</span>
         <input
           type="number"
-          value={props.options.header?.height ?? 8}
+          value={props.options.header?.height ?? 30}
           onChange={(event) =>
             update({
               header: {
+                ...DEFAULT_HEADER,
                 ...props.options.header,
                 height: Number(event.target.value),
               },
@@ -108,6 +125,7 @@ export function TableGeneralEditor(props: TableGeneralEditorProps) {
           onChange={(event) =>
             update({
               pagination: {
+                ...DEFAULT_PAGINATION,
                 ...props.options.pagination,
                 footerMode: event.target.value as "none" | "last-page" | "every-page",
               },

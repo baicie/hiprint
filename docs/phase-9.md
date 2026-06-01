@@ -90,3 +90,13 @@ See `docs/table-schema.md` for full type definitions.
 3. **Stable IDs for pagination** — Each page slice gets `table_1__page_0`, `table_1__page_1`, etc.
 4. **Nested columns flattened** — Phase 9 supports nested column groups by flattening to leaf columns.
 5. **Footer cells per column** — Footer rows mirror column structure, configured individually per cell.
+
+## Acceptance
+
+- Table element renders with header, body rows, and footer rows
+- Table pagination correctly splits rows across pages
+- Header repeats on each page when `repeatOnPageBreak` is enabled
+- Footer appears on last page or every page based on `footerMode`
+- Column editor allows adding/removing/reordering columns
+- Table fixtures render correctly in both DOM and SVG/Canvas targets
+- All table-related tests pass

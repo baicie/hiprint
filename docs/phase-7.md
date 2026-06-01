@@ -223,3 +223,13 @@ tests/designer-react/
 - Fixed `noUncheckedIndexedAccess` errors in `core` legacy adapter (`toNumber` function overload)
 - Fixed `DesignerStore.getState()` returning new object every call (infinite re-render bug)
 - Fixed `createUndoRedoCommand` import (did not exist in designer-core)
+
+## Acceptance
+
+- React designer (`apps/playground-designer-react`) renders and accepts element drag-and-drop
+- Vue designer (`apps/playground-designer-vue`) renders and accepts element drag-and-drop
+- Designer change events emit correct template JSON
+- Undo/redo works for add/remove/move/resize operations
+- Keyboard shortcuts (delete, Ctrl+Z, Ctrl+Y, Ctrl+D, Ctrl+V) all functional
+- All 272+ tests pass in `pnpm check:tests`
+- Typecheck passes in `pnpm typecheck`

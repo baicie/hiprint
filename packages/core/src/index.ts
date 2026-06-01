@@ -24,3 +24,5 @@ export * from "./registry/builtinElements";
 export * from "./registry/globalRegistry";
 
 export * from "./adapters/legacy";
+
+export * from "./layout";

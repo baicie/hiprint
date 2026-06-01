@@ -77,6 +77,8 @@ export interface TableElementOptions extends UnknownRecord {
   columns?: TableColumn[];
   dataField?: string;
   showHeader?: boolean;
+  rowHeight?: number;
+  headerHeight?: number;
 }
 
 export interface HtmlElementOptions extends UnknownRecord {

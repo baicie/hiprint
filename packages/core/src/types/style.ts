@@ -18,4 +18,6 @@ export interface PrintStyle {
   paddingLeft?: number;
 
   lineHeight?: number;
+
+  [key: string]: unknown;
 }

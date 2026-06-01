@@ -324,8 +324,6 @@ function normalizeVerticalAlign(
   return undefined;
 }
 
-function toNumber(value: unknown, fallback: number): number;
-function toNumber(value: unknown, fallback: undefined): number | undefined;
 function toNumber(
   value: unknown,
   fallback: number | undefined,

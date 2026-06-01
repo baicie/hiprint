@@ -26,7 +26,9 @@
     "test:vue": "vitest run tests/vue",
     "check:react": "pnpm --filter @hiprint-re/react typecheck && pnpm test:react",
     "check:vue": "pnpm --filter @hiprint-re/vue typecheck && pnpm test:vue",
-    "check:adapters": "pnpm check:react && pnpm check:vue"
+    "check:adapters": "pnpm check:react && pnpm check:vue",
+    "test:designer-core": "vitest run tests/designer-core",
+    "check:designer-core": "pnpm --filter @hiprint-re/designer-core typecheck && pnpm test:designer-core"
   },
   "devDependencies": {
     "@babel/parser": "^7.29.7",

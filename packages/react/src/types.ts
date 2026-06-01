@@ -1,3 +1,4 @@
+import type { CSSProperties, ReactNode, RefObject } from "react";
 import type {
   LayoutDocument,
   LayoutOptions,
@@ -35,7 +36,7 @@ export interface UsePrintPreviewOptions extends ReactPrintLayoutOptions {
 }
 
 export interface UsePrintPreviewResult {
-  containerRef: React.RefObject<HTMLDivElement | null>;
+  containerRef: RefObject<HTMLDivElement | null>;
   layout: LayoutDocument | null;
   warnings: LayoutWarning[];
   error: Error | null;
@@ -46,9 +47,9 @@ export interface UsePrintPreviewResult {
 
 export interface PrintPreviewProps extends UsePrintPreviewOptions {
   className?: string;
-  style?: React.CSSProperties;
-  loadingFallback?: React.ReactNode;
-  errorFallback?: React.ReactNode | ((error: Error) => React.ReactNode);
+  style?: CSSProperties;
+  loadingFallback?: ReactNode;
+  errorFallback?: ReactNode | ((error: Error) => ReactNode);
 }
 
 export interface PrintPreviewRef {

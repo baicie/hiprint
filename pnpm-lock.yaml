@@ -153,6 +153,12 @@ importers:
 
   packages/core: {}
 
+  packages/designer-core:
+    dependencies:
+      '@hiprint-re/core':
+        specifier: workspace:*
+        version: link:../core
+
   packages/dom:
     dependencies:
       '@hiprint-re/core':

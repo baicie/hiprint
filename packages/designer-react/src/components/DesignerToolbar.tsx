@@ -5,6 +5,7 @@ import { useDesignerCommands } from "../hooks/useDesignerCommands";
 import { useDesignerState } from "../hooks/useDesignerState";
 import { TemplateActions } from "./TemplateActions";
 import { ZoomControls } from "./ZoomControls";
+import { ExportActions } from "./ExportActions";
 import { useMemo } from "react";
 
 export function DesignerToolbar() {
@@ -94,6 +95,10 @@ export function DesignerToolbar() {
       <span className="hiprint-designer-toolbar-separator" />
 
       <TemplateActions />
+
+      <span className="hiprint-designer-toolbar-separator" />
+
+      <ExportActions />
 
       <span className="hiprint-designer-toolbar-separator" />
 

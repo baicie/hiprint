@@ -1,9 +1,8 @@
-import type { PrintElement } from "@hiprint-re/core";
 import { getElementById } from "@hiprint-re/designer-core";
 import { useDesignerState } from "../hooks/useDesignerState";
 import { useDesignerCommands } from "../hooks/useDesignerCommands";
 import { useDesignerRegistry } from "../registry/DesignerRegistryContext";
-import { getByPath, setByPath } from "../utils/path";
+import { getByPath } from "../utils/path";
 import { PropertyField } from "./PropertyField";
 
 export function DynamicPropertyPanel() {
@@ -38,9 +37,7 @@ export function DynamicPropertyPanel() {
   }
 
   function updateField(path: string, nextValue: unknown) {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const next = setByPath(element as any, path, nextValue) as PrintElement;
-    commands.updateElement(element!.id, next);
+    commands.updateElementProperty(element!.id, path, nextValue);
   }
 
   const sortedGroups = [...schema.groups].sort(
@@ -61,7 +58,10 @@ export function DynamicPropertyPanel() {
         if (fields.length === 0) return null;
 
         return (
-          <div key={group.key} className="hiprint-designer-property-group">
+          <div
+            key={group.key}
+            className="hiprint-designer-property-group"
+          >
             <div className="hiprint-designer-property-group-title">
               {group.label}
             </div>

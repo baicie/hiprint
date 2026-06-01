@@ -11,6 +11,9 @@
   },
   "dependencies": {
     "@hiprint-re/core": "workspace:*",
-    "@hiprint-re/dom": "workspace:*"
+    "@hiprint-re/dom": "workspace:*",
+    "@hiprint-re/svg": "workspace:*",
+    "@hiprint-re/canvas": "workspace:*",
+    "@hiprint-re/pdf": "workspace:*"
   }
 }

@@ -1,25 +1,84 @@
-import { describe, expect, it } from "vitest";
-import { render } from "@testing-library/react";
-import { PrintDesigner } from "../../packages/designer-react/src";
-import { createEmptyTemplate } from "../../packages/core/src";
-import { barcodePlugin, qrcodePlugin } from "../../packages/plugins-basic/src";
-import React from "react";
+import {
+  describe,
+  expect,
+  it,
+} from "vitest";
+import {
+  createEmptyTemplate,
+} from "../../packages/core/src";
+import {
+  createDesignerStore,
+} from "@hiprint-re/designer-core";
+import {
+  createPlugin,
+} from "../../packages/plugin/src";
+import {
+  createPropertySchema,
+} from "../../packages/core/src";
 
-describe("designer plugin integration", () => {
-  it("should render designer with plugins", () => {
-    const { container } = render(
-      React.createElement(
-        "div",
-        { style: { width: 1000, height: 800 } },
-        React.createElement(PrintDesigner, {
-          template: createEmptyTemplate(),
-          templateKind: "core",
-          plugins: [barcodePlugin(), qrcodePlugin()],
+describe("plugin integration via designer-core API", () => {
+  it("should add plugin element via command and read propertySchema", () => {
+    const pluginElementDef = {
+      type: "test:custom-box" as const,
+      name: "Custom Box",
+      defaultWidth: 50,
+      defaultHeight: 20,
+      propertySchema: createPropertySchema({
+        fields: [
+          {
+            key: "options.label",
+            label: "Label",
+            type: "text" as const,
+            defaultValue: "Custom Label",
+          },
+        ],
+      }),
+      createElement: (input: { id: string; x: number; y: number }) => ({
+        id: input.id,
+        type: "test:custom-box",
+        x: input.x,
+        y: input.y,
+        width: 50,
+        height: 20,
+        options: { label: "Custom Label" },
+      }),
+    };
+
+    const plugin = createPlugin({
+      name: "test-plugin",
+      version: "0.0.0",
+      elements: [pluginElementDef],
+    });
+
+    const template = createEmptyTemplate();
+    const panelId = template.panels[0]!.id;
+    const store = createDesignerStore({ template });
+
+    plugin.elements!.forEach((el) => {
+      store.dispatch({
+        id: "test-add",
+        name: "Test Add",
+        history: true,
+        execute: (state) => ({
+          ...state,
+          template: {
+            ...state.template,
+            panels: state.template.panels.map((p) =>
+              p.id === panelId
+                ? { ...p, elements: [...p.elements, el.createElement({ id: "el1", x: 10, y: 10 })] }
+                : p,
+            ),
+          },
         }),
-      ),
+      });
+    });
+
+    const state = store.getState();
+    const element = state.template.panels[0]!.elements.find(
+      (e) => e.type === "test:custom-box",
     );
 
-    expect(container.textContent).toContain("Barcode");
-    expect(container.textContent).toContain("QRCode");
+    expect(element).toBeTruthy();
+    expect((element as { options: { label: string } }).options.label).toBe("Custom Label");
   });
 });

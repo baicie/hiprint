@@ -3,6 +3,15 @@ import type {
   LayoutElement,
 } from "@hiprint-re/core";
 import type { DomRenderContext } from "@hiprint-re/dom";
+import type {
+  SvgElementRenderer,
+} from "@hiprint-re/svg";
+import type {
+  CanvasElementRenderer,
+} from "@hiprint-re/canvas";
+import type {
+  PdfElementRenderer,
+} from "@hiprint-re/pdf";
 
 export interface HiprintPlugin {
   name: string;
@@ -12,6 +21,10 @@ export interface HiprintPlugin {
   elements?: ElementDefinition[];
   domRenderers?: PluginDomRenderer[];
 
+  svgRenderers?: SvgElementRenderer[];
+  canvasRenderers?: CanvasElementRenderer[];
+  pdfRenderers?: PdfElementRenderer[];
+
   designer?: PluginDesignerExtension;
 
   setup?: (ctx: PluginSetupContext) => void;
@@ -20,6 +33,9 @@ export interface HiprintPlugin {
 export interface PluginSetupContext {
   registerElement: (definition: ElementDefinition) => void;
   registerDomRenderer: (renderer: PluginDomRenderer) => void;
+  registerSvgRenderer: (renderer: SvgElementRenderer) => void;
+  registerCanvasRenderer: (renderer: CanvasElementRenderer) => void;
+  registerPdfRenderer: (renderer: PdfElementRenderer) => void;
 }
 
 export interface PluginDomRenderer<

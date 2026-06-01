@@ -4,7 +4,19 @@ import {
   type ElementDefinition,
   type ElementRegistry,
 } from "@hiprint-re/core";
-import type { HiprintPlugin, PluginDomRenderer } from "./types";
+import type {
+  HiprintPlugin,
+  PluginDomRenderer,
+} from "@hiprint-re/plugin";
+import type {
+  SvgElementRenderer,
+} from "@hiprint-re/svg";
+import type {
+  CanvasElementRenderer,
+} from "@hiprint-re/canvas";
+import type {
+  PdfElementRenderer,
+} from "@hiprint-re/pdf";
 import { validatePlugin } from "./validatePlugin";
 
 export class PluginManager {
@@ -13,6 +25,9 @@ export class PluginManager {
     ...builtinElementDefinitions,
   ];
   private domRenderers = new Map<string, PluginDomRenderer>();
+  private svgRenderers = new Map<string, SvgElementRenderer>();
+  private canvasRenderers = new Map<string, CanvasElementRenderer>();
+  private pdfRenderers = new Map<string, PdfElementRenderer>();
 
   register(plugin: HiprintPlugin): void {
     validatePlugin(plugin);
@@ -33,9 +48,25 @@ export class PluginManager {
       this.registerDomRenderer(renderer);
     }
 
+    for (const renderer of plugin.svgRenderers ?? []) {
+      this.registerSvgRenderer(renderer);
+    }
+
+    for (const renderer of plugin.canvasRenderers ?? []) {
+      this.registerCanvasRenderer(renderer);
+    }
+
+    for (const renderer of plugin.pdfRenderers ?? []) {
+      this.registerPdfRenderer(renderer);
+    }
+
     plugin.setup?.({
       registerElement: (definition) => this.registerElement(definition),
       registerDomRenderer: (renderer) => this.registerDomRenderer(renderer),
+      registerSvgRenderer: (renderer) => this.registerSvgRenderer(renderer),
+      registerCanvasRenderer: (renderer) =>
+        this.registerCanvasRenderer(renderer),
+      registerPdfRenderer: (renderer) => this.registerPdfRenderer(renderer),
     });
   }
 
@@ -55,12 +86,48 @@ export class PluginManager {
     this.domRenderers.set(renderer.type, renderer);
   }
 
+  registerSvgRenderer(renderer: SvgElementRenderer): void {
+    if (this.svgRenderers.has(renderer.type)) {
+      return;
+    }
+
+    this.svgRenderers.set(renderer.type, renderer);
+  }
+
+  registerCanvasRenderer(renderer: CanvasElementRenderer): void {
+    if (this.canvasRenderers.has(renderer.type)) {
+      return;
+    }
+
+    this.canvasRenderers.set(renderer.type, renderer);
+  }
+
+  registerPdfRenderer(renderer: PdfElementRenderer): void {
+    if (this.pdfRenderers.has(renderer.type)) {
+      return;
+    }
+
+    this.pdfRenderers.set(renderer.type, renderer);
+  }
+
   createElementRegistry(): ElementRegistry {
     return createElementRegistry(this.elementDefinitions);
   }
 
   getDomRenderer(type: string): PluginDomRenderer | undefined {
     return this.domRenderers.get(type);
+  }
+
+  getSvgRenderer(type: string): SvgElementRenderer | undefined {
+    return this.svgRenderers.get(type);
+  }
+
+  getCanvasRenderer(type: string): CanvasElementRenderer | undefined {
+    return this.canvasRenderers.get(type);
+  }
+
+  getPdfRenderer(type: string): PdfElementRenderer | undefined {
+    return this.pdfRenderers.get(type);
   }
 
   getPlugins(): HiprintPlugin[] {
@@ -73,6 +140,18 @@ export class PluginManager {
 
   getDomRenderers(): PluginDomRenderer[] {
     return [...this.domRenderers.values()];
+  }
+
+  getSvgRenderers(): SvgElementRenderer[] {
+    return [...this.svgRenderers.values()];
+  }
+
+  getCanvasRenderers(): CanvasElementRenderer[] {
+    return [...this.canvasRenderers.values()];
+  }
+
+  getPdfRenderers(): PdfElementRenderer[] {
+    return [...this.pdfRenderers.values()];
   }
 }
 

@@ -4,6 +4,7 @@ export * from "./commandManager";
 export * from "./commands/addElement";
 export * from "./commands/removeElement";
 export * from "./commands/updateElement";
+export * from "./commands/updateElementProperty";
 export * from "./commands/moveElement";
 export * from "./commands/resizeElement";
 export * from "./commands/selectElement";

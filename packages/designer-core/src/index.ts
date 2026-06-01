@@ -30,3 +30,5 @@ export * from "./io";
 
 export * from "./keyboard/keymap";
 export * from "./keyboard/shortcuts";
+
+export * from "./utils/path";

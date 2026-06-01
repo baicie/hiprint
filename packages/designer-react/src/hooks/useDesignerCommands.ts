@@ -10,6 +10,7 @@ import {
   createResizeElementCommand,
   createSelectElementCommand,
   createUpdateElementCommand,
+  createUpdateElementPropertyCommand,
 } from "@hiprint-re/designer-core";
 import type { PrintElement } from "@hiprint-re/core";
 import type { ResizeHandle } from "@hiprint-re/designer-core";
@@ -79,6 +80,13 @@ export function useDesignerCommands() {
 
       updateElement(id: string, patch: Partial<PrintElement>) {
         store.dispatch(createUpdateElementCommand({ id, patch }));
+        emitChange();
+      },
+
+      updateElementProperty(id: string, path: string, value: unknown) {
+        store.dispatch(
+          createUpdateElementPropertyCommand({ id, path, value }),
+        );
         emitChange();
       },
 

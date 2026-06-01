@@ -154,6 +154,40 @@ importers:
         specifier: ^8.0.14
         version: 8.0.14(@types/node@25.9.1)(esbuild@0.28.0)(tsx@4.22.4)
 
+  apps/playground-plugins-react:
+    dependencies:
+      '@hiprint-re/core':
+        specifier: workspace:*
+        version: link:../../packages/core
+      '@hiprint-re/designer-react':
+        specifier: workspace:*
+        version: link:../../packages/designer-react
+      '@hiprint-re/plugins-basic':
+        specifier: workspace:*
+        version: link:../../packages/plugins-basic
+      react:
+        specifier: ^19.2.6
+        version: 19.2.6
+      react-dom:
+        specifier: ^19.2.6
+        version: 19.2.6(react@19.2.6)
+    devDependencies:
+      '@types/react':
+        specifier: ^19.2.15
+        version: 19.2.15
+      '@types/react-dom':
+        specifier: ^19.2.3
+        version: 19.2.3(@types/react@19.2.15)
+      '@vitejs/plugin-react':
+        specifier: ^6.0.2
+        version: 6.0.2(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)(tsx@4.22.4))
+      typescript:
+        specifier: ^6.0.3
+        version: 6.0.3
+      vite:
+        specifier: ^8.0.14
+        version: 8.0.14(@types/node@25.9.1)(esbuild@0.28.0)(tsx@4.22.4)
+
   apps/playground-react:
     dependencies:
       '@hiprint-re/react':
@@ -264,6 +298,27 @@ importers:
       '@hiprint-re/shared':
         specifier: workspace:*
         version: link:../shared
+
+  packages/plugin:
+    dependencies:
+      '@hiprint-re/core':
+        specifier: workspace:*
+        version: link:../core
+      '@hiprint-re/dom':
+        specifier: workspace:*
+        version: link:../dom
+
+  packages/plugins-basic:
+    dependencies:
+      '@hiprint-re/core':
+        specifier: workspace:*
+        version: link:../core
+      '@hiprint-re/dom':
+        specifier: workspace:*
+        version: link:../dom
+      '@hiprint-re/plugin':
+        specifier: workspace:*
+        version: link:../plugin
 
   packages/react:
     dependencies:

@@ -6,6 +6,7 @@ import { createClearSelectionCommand } from "@hiprint-re/designer-core";
 import { useDesignerContext } from "../context/useDesignerContext";
 import { useDesignerLayout } from "../hooks/useDesignerLayout";
 import { useDesignerState } from "../hooks/useDesignerState";
+import { useDesignerPluginManager } from "../plugin/DesignerPluginProvider";
 import { SelectionOverlay } from "./SelectionOverlay";
 import { SnaplineOverlay } from "./SnaplineOverlay";
 import { Ruler } from "./Ruler";
@@ -14,6 +15,7 @@ export function DesignerCanvas() {
   const ctx = useDesignerContext();
   const state = useDesignerState();
   const { layout, error } = useDesignerLayout();
+  const pluginManager = useDesignerPluginManager();
 
   const previewRef = useRef<HTMLDivElement | null>(null);
   const mountRef = useRef<MountLayoutResult | null>(null);
@@ -36,13 +38,17 @@ export function DesignerCanvas() {
       ...ctx.domOptions,
       pageGap: 24,
       onPageClick: handlePageClick,
+      renderers: [
+        ...(ctx.domOptions?.renderers ?? []),
+        ...pluginManager.getDomRenderers(),
+      ],
     });
 
     return () => {
       mountRef.current?.dispose();
       mountRef.current = null;
     };
-  }, [layout, ctx.domOptions, ctx.store, state.activePanelId]);
+  }, [layout, ctx.domOptions, ctx.store, state.activePanelId, pluginManager]);
 
   function clearSelection(event: React.MouseEvent) {
     if (event.target === event.currentTarget) {

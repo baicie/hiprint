@@ -1,4 +1,5 @@
 import type { LayoutDocument } from "@hiprint-re/core";
+import type { DomElementRenderer } from "./plugin/domRendererRegistry";
 
 export interface DomRenderOptions {
   /**
@@ -50,6 +51,11 @@ export interface DomRenderOptions {
    * Called when a page element is clicked (outside any element DOM node).
    */
   onPageClick?: (pageIndex: number, event: MouseEvent) => void;
+
+  /**
+   * Plugin DOM renderers.
+   */
+  renderers?: DomElementRenderer[];
 }
 
 export interface RequiredDomRenderOptions {
@@ -62,6 +68,7 @@ export interface RequiredDomRenderOptions {
   renderUnknown: boolean;
   className?: string;
   onPageClick?: (pageIndex: number, event: MouseEvent) => void;
+  renderers: DomElementRenderer[];
 }
 
 export interface DomRenderContext {

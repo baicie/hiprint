@@ -1,0 +1,17 @@
+{
+  "name": "@hiprint-re/plugins-basic",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "files": ["src"],
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@hiprint-re/core": "workspace:*",
+    "@hiprint-re/dom": "workspace:*",
+    "@hiprint-re/plugin": "workspace:*"
+  }
+}

@@ -2,6 +2,7 @@ export * from "./types";
 export * from "./layoutTemplate";
 export * from "./layoutPanel";
 export * from "./layoutElement";
+export * from "./layoutPluginElement";
 export * from "./layoutText";
 export * from "./layoutImage";
 export * from "./layoutLine";

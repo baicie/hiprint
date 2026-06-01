@@ -1,0 +1,25 @@
+{
+  "name": "@hiprint-re/playground-plugins-react",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@hiprint-re/core": "workspace:*",
+    "@hiprint-re/designer-react": "workspace:*",
+    "@hiprint-re/plugins-basic": "workspace:*",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.2",
+    "@types/react": "^19.2.15",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.14"
+  }
+}

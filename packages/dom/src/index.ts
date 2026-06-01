@@ -1,5 +1,7 @@
 export * from "./types";
 
+export * from "./plugin/domRendererRegistry";
+
 export * from "./renderToDom";
 export * from "./mountLayout";
 export * from "./renderToHtmlString";

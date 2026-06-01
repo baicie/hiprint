@@ -1,5 +1,6 @@
 import type { LayoutElement, LayoutPage } from "@hiprint-re/core";
 import type { DomRenderContext } from "../types";
+import { createDomRendererRegistry } from "../plugin/domRendererRegistry";
 import { renderText } from "./renderText";
 import { renderImage } from "./renderImage";
 import { renderLine } from "./renderLine";
@@ -43,14 +44,18 @@ export function renderElement(
         page,
         ctx,
       );
-
-    default:
-      return ctx.options.renderUnknown
-        ? renderUnknown(
-            element as Parameters<typeof renderUnknown>[0],
-            page,
-            ctx,
-          )
-        : null;
   }
+
+  const registry = createDomRendererRegistry(ctx.options.renderers);
+  const pluginRenderer = registry.get(element.type);
+
+  if (pluginRenderer) {
+    return pluginRenderer.render(element, ctx);
+  }
+
+  return ctx.options.renderUnknown ? renderUnknown(
+      element as Parameters<typeof renderUnknown>[0],
+      page,
+      ctx,
+    ) : null;
 }

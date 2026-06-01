@@ -1,27 +1,23 @@
 import { createContext, useContext, useMemo } from "react";
-import {
-  builtinElementDefinitions,
-  createElementRegistry,
-  type ElementDefinition,
-  type ElementRegistry,
-} from "@hiprint-re/core";
+import type { ElementRegistry } from "@hiprint-re/core";
+import { useDesignerPluginManager } from "../plugin/DesignerPluginProvider";
 
-export const DesignerRegistryContext = createContext<ElementRegistry | null>(null);
+export const DesignerRegistryContext = createContext<ElementRegistry | null>(
+  null,
+);
 
 export interface DesignerRegistryProviderProps {
-  elements?: ElementDefinition[];
   children: React.ReactNode;
 }
 
 export function DesignerRegistryProvider(
   props: DesignerRegistryProviderProps,
 ) {
+  const pluginManager = useDesignerPluginManager();
+
   const registry = useMemo(() => {
-    return createElementRegistry([
-      ...builtinElementDefinitions,
-      ...(props.elements ?? []),
-    ]);
-  }, [props.elements]);
+    return pluginManager.createElementRegistry();
+  }, [pluginManager]);
 
   return (
     <DesignerRegistryContext.Provider value={registry}>

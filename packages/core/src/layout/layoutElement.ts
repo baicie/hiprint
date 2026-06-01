@@ -6,8 +6,8 @@ import { layoutImage } from "./layoutImage";
 import { layoutLine } from "./layoutLine";
 import { layoutRect } from "./layoutRect";
 import { layoutTable } from "./layoutTable";
+import { layoutPluginElement } from "./layoutPluginElement";
 import { warnUnknownElement } from "./warnings";
-import { normalizeYInPage } from "./utils";
 
 export interface LayoutElementInput {
   ctx: LayoutContext;
@@ -45,21 +45,6 @@ export function layoutElement(input: LayoutElementInput): LayoutElement[] {
         path: input.elementPath,
       });
 
-      return [
-        {
-          id: element.id,
-          sourcePanelId: input.panel.id,
-          sourceElementId: element.id,
-          pageIndex: input.pageIndex,
-          type: "unknown",
-          x: element.x,
-          y: normalizeYInPage(element.y, input.pageHeight),
-          width: element.width,
-          height: element.height,
-          hidden: element.hidden,
-          style: element.style,
-          raw: element.raw,
-        },
-      ];
+      return [layoutPluginElement(input)];
   }
 }

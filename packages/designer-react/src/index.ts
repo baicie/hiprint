@@ -33,3 +33,5 @@ export * from "./components/LayerPanel";
 export * from "./components/StatusBar";
 
 export * from "./registry/DesignerRegistryContext";
+
+export * from "./plugin/DesignerPluginProvider";

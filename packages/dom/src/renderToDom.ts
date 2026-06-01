@@ -64,5 +64,6 @@ function resolveOptions(
     renderUnknown: options.renderUnknown ?? true,
     className: options.className,
     onPageClick: options.onPageClick,
+    renderers: options.renderers ?? [],
   };
 }

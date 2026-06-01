@@ -6,6 +6,7 @@ import type {
 } from "@hiprint-re/core";
 import type { DomRenderOptions } from "@hiprint-re/dom";
 import type { DesignerStore } from "@hiprint-re/designer-core";
+import type { HiprintPlugin } from "@hiprint-re/plugin";
 
 export type DesignerTemplateKind = "core" | "legacy" | "auto";
 
@@ -15,6 +16,8 @@ export interface PrintDesignerProps {
   template: DesignerTemplateInput;
   templateKind?: DesignerTemplateKind;
   data?: unknown;
+
+  plugins?: HiprintPlugin[];
 
   layoutOptions?: LayoutOptions;
   domOptions?: DomRenderOptions;

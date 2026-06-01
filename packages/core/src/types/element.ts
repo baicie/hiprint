@@ -13,7 +13,7 @@ export type {
   TableBorderOptions,
 } from "./table";
 
-export type PrintElementType =
+export type BuiltinPrintElementType =
   | "text"
   | "image"
   | "table"
@@ -23,6 +23,8 @@ export type PrintElementType =
   | "qrcode"
   | "html"
   | "unknown";
+
+export type PrintElementType = BuiltinPrintElementType | string;
 
 export interface DataBinding {
   field?: string;
@@ -125,6 +127,10 @@ export type UnknownElement = PrintElementBase & {
   type: "unknown";
 };
 
+export type AnyElement = PrintElementBase & {
+  type: string;
+};
+
 export type PrintElement =
   | TextElement
   | ImageElement
@@ -134,4 +140,4 @@ export type PrintElement =
   | BarcodeElement
   | QrCodeElement
   | TableElement
-  | UnknownElement;
+  | AnyElement;

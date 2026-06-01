@@ -173,6 +173,28 @@ function mapLegacyOptionsByType(
     };
   }
 
+  if (type === "barcode") {
+    return {
+      value: options.text ?? options.value ?? options.title,
+      format: options.format ?? "code128",
+      showText: options.showText ?? true,
+    };
+  }
+
+  if (type === "qrcode") {
+    return {
+      value: options.text ?? options.value ?? options.title,
+      errorCorrectionLevel: options.errorCorrectionLevel ?? "M",
+    };
+  }
+
+  if (type === "html") {
+    return {
+      html: options.html ?? options.content ?? "",
+      sandbox: true,
+    };
+  }
+
   return {
     ...options,
   };

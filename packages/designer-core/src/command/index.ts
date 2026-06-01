@@ -12,3 +12,5 @@ export * from "./commands/duplicateElement";
 export * from "./commands/pasteElements";
 export * from "./commands/alignElements";
 export * from "./commands/distributeElements";
+export * from "./commands/setActivePanel";
+export * from "./commands/setViewport";

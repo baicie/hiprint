@@ -1,0 +1,297 @@
+html,
+body,
+#app,
+.app {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hiprint-designer {
+  display: grid;
+  grid-template-rows: 44px 1fr 24px;
+  width: 100%;
+  height: 100%;
+  color: #111827;
+  background: #f3f4f6;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.hiprint-designer-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 12px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+.hiprint-designer-toolbar button {
+  height: 28px;
+  padding: 0 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.hiprint-designer-toolbar button:hover {
+  background: #f9fafb;
+}
+
+.hiprint-designer-toolbar-separator {
+  width: 1px;
+  height: 20px;
+  margin: 0 4px;
+  background: #e5e7eb;
+}
+
+.hiprint-designer-main {
+  display: grid;
+  grid-template-columns: 240px 1fr 280px;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.hiprint-designer-left,
+.hiprint-designer-right {
+  min-height: 0;
+  overflow: auto;
+  background: #fff;
+  border-right: 1px solid #e5e7eb;
+}
+
+.hiprint-designer-right {
+  border-right: 0;
+  border-left: 1px solid #e5e7eb;
+}
+
+.hiprint-designer-center {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.hiprint-designer-panel {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.hiprint-designer-panel-title {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-weight: 600;
+  font-size: 13px;
+  background: #f9fafb;
+}
+
+.hiprint-designer-palette {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 12px;
+}
+
+.hiprint-designer-palette-item {
+  height: 36px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.hiprint-designer-palette-item:hover {
+  background: #f9fafb;
+}
+
+.hiprint-designer-canvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hiprint-designer-canvas-scroll {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding: 32px;
+}
+
+.hiprint-designer-canvas-content {
+  position: relative;
+  width: max-content;
+  min-width: 100%;
+  margin: 0 auto;
+}
+
+.hiprint-designer-preview-layer {
+  position: relative;
+  z-index: 1;
+}
+
+.hiprint-designer-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hiprint-designer-selection {
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px solid #2563eb;
+  pointer-events: auto;
+  cursor: move;
+}
+
+.hiprint-designer-resize-handle {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: #2563eb;
+  border: 1px solid #fff;
+  border-radius: 999px;
+}
+
+.hiprint-designer-resize-n {
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: ns-resize;
+}
+
+.hiprint-designer-resize-s {
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: ns-resize;
+}
+
+.hiprint-designer-resize-e {
+  right: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: ew-resize;
+}
+
+.hiprint-designer-resize-w {
+  left: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: ew-resize;
+}
+
+.hiprint-designer-resize-ne {
+  right: -4px;
+  top: -4px;
+  cursor: nesw-resize;
+}
+
+.hiprint-designer-resize-nw {
+  left: -4px;
+  top: -4px;
+  cursor: nwse-resize;
+}
+
+.hiprint-designer-resize-se {
+  right: -4px;
+  bottom: -4px;
+  cursor: nwse-resize;
+}
+
+.hiprint-designer-resize-sw {
+  left: -4px;
+  bottom: -4px;
+  cursor: nesw-resize;
+}
+
+.hiprint-designer-field {
+  display: grid;
+  gap: 4px;
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
+.hiprint-designer-field span {
+  color: #6b7280;
+}
+
+.hiprint-designer-field input {
+  height: 28px;
+  padding: 0 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.hiprint-designer-layers {
+  display: grid;
+  gap: 4px;
+  padding: 8px;
+}
+
+.hiprint-designer-layer-item {
+  display: grid;
+  gap: 2px;
+  text-align: left;
+  padding: 8px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.hiprint-designer-layer-item:hover {
+  background: #f9fafb;
+}
+
+.hiprint-designer-layer-item.is-selected {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.hiprint-designer-layer-item small {
+  color: #6b7280;
+}
+
+.hiprint-designer-statusbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 12px;
+  border-top: 1px solid #e5e7eb;
+  background: #fff;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.hiprint-designer-empty {
+  padding: 12px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.hiprint-designer-error {
+  margin: 0;
+  padding: 16px;
+  color: crimson;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.hiprint-designer-toolbar-zoom {
+  min-width: 44px;
+  text-align: center;
+  font-size: 12px;
+  color: #374151;
+}
+
+.hiprint-designer-toolbar button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

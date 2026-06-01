@@ -19,6 +19,14 @@ export function renderPage(
   pageDom.style.height = cssLength(page.height, unit);
   pageDom.style.margin = `0 auto ${ctx.options.pageGap}px`;
 
+  if (ctx.onPageClick) {
+    pageDom.addEventListener("click", (e) => {
+      if (e.target === pageDom) {
+        ctx.onPageClick!(page.index, e);
+      }
+    });
+  }
+
   for (const element of page.elements) {
     const elementDom = renderElement(element, page, ctx);
 

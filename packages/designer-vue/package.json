@@ -1,0 +1,25 @@
+{
+  "name": "@hiprint-re/designer-vue",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "files": ["src"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@hiprint-re/core": "workspace:*",
+    "@hiprint-re/dom": "workspace:*",
+    "@hiprint-re/designer-core": "workspace:*"
+  },
+  "peerDependencies": {
+    "vue": ">=3.4.0"
+  },
+  "devDependencies": {
+    "vue": "^3.5.0"
+  }
+}

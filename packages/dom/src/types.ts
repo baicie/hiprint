@@ -45,6 +45,11 @@ export interface DomRenderOptions {
    * Additional class name for the root element.
    */
   className?: string;
+
+  /**
+   * Called when a page element is clicked (outside any element DOM node).
+   */
+  onPageClick?: (pageIndex: number, event: MouseEvent) => void;
 }
 
 export interface RequiredDomRenderOptions {
@@ -56,12 +61,14 @@ export interface RequiredDomRenderOptions {
   resolveImageSrc: (src: string | undefined) => string | undefined;
   renderUnknown: boolean;
   className?: string;
+  onPageClick?: (pageIndex: number, event: MouseEvent) => void;
 }
 
 export interface DomRenderContext {
   document: Document;
   layout: LayoutDocument;
   options: RequiredDomRenderOptions;
+  onPageClick?: (pageIndex: number, event: MouseEvent) => void;
 }
 
 export interface DomRenderResult {

@@ -35,6 +35,9 @@ export function fromLegacyTemplate(
 
   const firstPanel = panels[0];
 
+  const width = toNumber(firstPanel?.width, 210);
+  const height = toNumber(firstPanel?.height, 297);
+
   const template: PrintTemplate = {
     schemaVersion: CORE_SCHEMA_VERSION,
     id: options.id ?? "template_legacy",
@@ -44,13 +47,10 @@ export function fromLegacyTemplate(
     },
     paper: {
       preset: inferPaperPreset(firstPanel?.paperType),
-      width: toNumber(firstPanel?.width, 210),
-      height: toNumber(firstPanel?.height, 297),
+      width,
+      height,
       unit: "mm",
-      orientation: inferOrientation(
-        toNumber(firstPanel?.width, 210),
-        toNumber(firstPanel?.height, 297),
-      ),
+      orientation: inferOrientation(width, height),
       margin: {
         top: 0,
         right: 0,
@@ -80,10 +80,7 @@ function mapLegacyPanel(panel: LegacyPanel, panelIndex: number): PrintPanel {
       width: toNumber(panel.width, 210),
       height: toNumber(panel.height, 297),
       preset: inferPaperPreset(panel.paperType),
-      orientation: inferOrientation(
-        toNumber(panel.width, 210),
-        toNumber(panel.height, 297),
-      ),
+      orientation: "portrait",
       unit: "mm",
     },
     elements: printElements.map((element, elementIndex) =>
@@ -324,10 +321,9 @@ function normalizeVerticalAlign(
   return undefined;
 }
 
-function toNumber(
-  value: unknown,
-  fallback: number | undefined,
-): number | undefined {
+function toNumber(value: unknown, fallback: number): number;
+function toNumber(value: unknown, fallback: undefined): number | undefined;
+function toNumber(value: unknown, fallback: number | undefined): number | undefined {
   return typeof value === "number" && Number.isFinite(value) ? value : fallback;
 }
 

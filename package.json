@@ -28,7 +28,12 @@
     "check:vue": "pnpm --filter @hiprint-re/vue typecheck && pnpm test:vue",
     "check:adapters": "pnpm check:react && pnpm check:vue",
     "test:designer-core": "vitest run tests/designer-core",
-    "check:designer-core": "pnpm --filter @hiprint-re/designer-core typecheck && pnpm test:designer-core"
+    "check:designer-core": "pnpm --filter @hiprint-re/designer-core typecheck && pnpm test:designer-core",
+    "dev:designer-react": "pnpm --filter @hiprint-re/playground-designer-react dev",
+    "dev:designer-vue": "pnpm --filter @hiprint-re/playground-designer-vue dev",
+    "test:designer-react": "vitest run tests/designer-react",
+    "check:designer-react": "pnpm --filter @hiprint-re/designer-react typecheck && pnpm test:designer-react",
+    "check:designer-vue": "pnpm --filter @hiprint-re/designer-vue typecheck && pnpm test:designer-vue"
   },
   "devDependencies": {
     "@babel/parser": "^7.29.7",

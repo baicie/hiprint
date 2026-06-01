@@ -14,6 +14,7 @@ export class DesignerStore {
   private subscribers = new Set<DesignerStoreSubscriber>();
   private history: HistoryManager;
   private commandManager: CommandManager;
+  private currentVersion = 0;
 
   constructor(options: DesignerStoreOptions) {
     this.state = createInitialDesignerState(options);
@@ -22,7 +23,7 @@ export class DesignerStore {
   }
 
   getState(): DesignerState {
-    return cloneDeep(this.state);
+    return this.state;
   }
 
   getStateRef(): DesignerState {
@@ -31,11 +32,13 @@ export class DesignerStore {
 
   setState(nextState: DesignerState): void {
     this.state = nextState;
+    this.currentVersion++;
     this.notify();
   }
 
   dispatch(command: DesignerCommand): void {
     this.state = this.commandManager.execute(this.state, command);
+    this.currentVersion++;
     this.notify();
   }
 
@@ -49,11 +52,13 @@ export class DesignerStore {
 
   undo(): void {
     this.state = this.history.undo(this.state);
+    this.currentVersion++;
     this.notify();
   }
 
   redo(): void {
     this.state = this.history.redo(this.state);
+    this.currentVersion++;
     this.notify();
   }
 
@@ -70,7 +75,7 @@ export class DesignerStore {
   }
 
   private notify(): void {
-    const snapshot = this.getState();
+    const snapshot = cloneDeep(this.state);
 
     for (const subscriber of this.subscribers) {
       subscriber(snapshot);

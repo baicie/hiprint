@@ -25,6 +25,7 @@ export function renderToDom(
     document: doc,
     layout,
     options: resolvedOptions,
+    onPageClick: resolvedOptions.onPageClick,
   };
 
   const root = doc.createElement("div");
@@ -52,7 +53,7 @@ export function renderToDom(
 function resolveOptions(
   layout: LayoutDocument,
   options: DomRenderOptions,
-): RequiredDomRenderOptions {
+): RequiredDomRenderOptions & { onPageClick?: (pageIndex: number, event: MouseEvent) => void } {
   return {
     classNamePrefix: options.classNamePrefix ?? "hiprint-re",
     injectDefaultStyle: options.injectDefaultStyle ?? true,
@@ -62,5 +63,6 @@ function resolveOptions(
     resolveImageSrc: options.resolveImageSrc ?? ((src) => src),
     renderUnknown: options.renderUnknown ?? true,
     className: options.className,
+    onPageClick: options.onPageClick,
   };
 }
